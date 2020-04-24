@@ -1,7 +1,7 @@
 control
 ===========
 
-管理`Enlighten`啟動、關閉、重新啟動、log輪替...等動作。
+管理`Enlighten`和`www`啟動、關閉、重新啟動、log輪替...等動作。
 
 Help
 -----------
@@ -9,7 +9,7 @@ Help
 ```
 $ control help
 Usage: control [GROUP] [OPTION...]
-Control the Enlighten
+Control the Enlighten and www
 
 Start the Enlighten
     start
@@ -40,8 +40,24 @@ Reload the Enlighten
     reload
         --pid,   -p    Enlighten process ID
 
+Start the www
+    start-www
+
+Stop the www
+    stop-www
+        --pid,   -p    www process ID
+        --wait,  -w    waiting seconds, default: 10 seconds
+
+Restart the www
+    restart-www
+        --pid,   -p    www process ID
+        --wait,  -w    waiting seconds, default: 10 seconds
+
+Force stop the www
+    kill-www
+
 Print running process information
-    pid-list
+    proc-list
 
 Print the help
     help
@@ -134,24 +150,74 @@ $ sudo control reload
 
 重新讀取設定檔必須使用root權限；重新讀取只能重讀部分內容。
 
-Example 8 列出程序資訊
+Example 8 啟動`www`
+-----------
+
+```
+$ sudo control start-www
+'www' is starting...
+
+$ sudo control start-www
+control: 'www' is running
+```
+
+啟動必須使用root權限。
+
+Example 9 停止`www`
+-----------
+
+```
+$ sudo control stop-www
+control: 'www' is stopping...
+control: 'www' is stopped
+
+$ sudo control stop-www
+control: 'www' is not running
+```
+
+停止必須使用root權限。
+
+Example 10 重新啟動`www`
+-------------
+
+```
+$ sudo control restart-www
+control: 'www' is stopping...
+control: 'www' is stopped
+'www' is starting...
+```
+
+重新啟動停止必須使用root權限；效果等同於：
+
+```
+$ sudo control stop-www
+$ sudo control start-www
+```
+
+Example 11 強迫停止`www`
 ------------
 
 ```
-$ sudo control pid-list
+$ sudo control kill-www
+```
+
+強迫停止必須使用root權限。
+
+Example 12 列出程序資訊
+------------
+
+```
+$ sudo control proc-list
       Name        PID        Location   Position   CPU List
- Enlighten      80636               -       Core        0-3
-       www     106880               -          -        0-3
-   Nethook      80742           pktx2     Master        0-3
-   Nethook      80743           pktx1     Master        0-3
-   Nethook      80817           pktx1     Worker        0-3
-   Nethook      80818           pktx2     Worker        0-3
- Listening      80825      pktx2:4438     Master        0-3
- Listening      80826      pktx1:8443     Master        0-3
- Listening      80827      pktx1:8443     Worker          0
- Listening      80828      pktx2:4438     Worker          2
- Listening      80829      pktx1:8443     Worker          1
- Listening      80830      pktx2:4438     Worker          3
+ Enlighten      17166               -       Core        0-3
+       www      17142               -          -        0-3
+   Nethook      17272           pktx2     Master        0-3
+   Nethook      17273           pktx1     Master        0-3
+   Nethook      17347           pktx1     Worker        0-3
+   Nethook      17350           pktx2     Worker        0-3
+ Listening      17356      pktx1:8443     Master        0-3
+ Listening      17357      pktx1:8443     Worker          0
+ Listening      17358      pktx1:8443     Worker          1
 ```
 
 列出程序資訊必須使用root權限。

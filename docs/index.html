@@ -26,6 +26,19 @@
       subMaxLevel: 2,
       logo: '/images/logo.png',
       auto2top: true,
+      plugins: [
+        function(hook) {
+          var footer = [
+            '<footer style="text-align: center;margin-top: 50px;">',
+            '<span> <img src="images/packetx.png" width=5.5%> &copy; 2018 <a href="https://packetx.biz/" target="_blank">PacketX Technology 瑞擎數位有限公司</a> All Rights Reserved. </br> sales@packetx.biz </span>',
+            '</footer>'
+          ].join('');
+
+          hook.afterEach(function(html) {
+            return html + footer;
+          });
+        }
+      ],
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>

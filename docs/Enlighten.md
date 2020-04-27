@@ -44,14 +44,14 @@ Dynamic Generating Forged Certificates
 
 * Proxy mode為`SSL/TLS to SSL/TLS`時，會根據Server憑證資訊動態簽出一個憑證給Client。
 
-Key Exchange
+Key Exchange(Base on OpenSSL Builds)
 -------------
 
 1. `ECDHE`
 2. `DHE`
 3. `RSA`
 
-Supported Named Groups
+Supported Named Groups(Base on OpenSSL Builds)
 -------------
 
 1. `X25519`
@@ -60,7 +60,7 @@ Supported Named Groups
 4. `P-384`
 5. `P-521`
 
-Symmetric Key
+Symmetric Key(Base on OpenSSL Builds)
 -------------
 
 1. `RC4`
@@ -72,7 +72,7 @@ Symmetric Key
 7. `SEED`
 
 
-Cryptographic Message Authentication Code
+Cryptographic Message Authentication Code(Base on OpenSSL Builds)
 -------------
 
 1. `MD5`
@@ -80,7 +80,7 @@ Cryptographic Message Authentication Code
 3. `SHA384`
 4. `Poly1305`
 
-Digital Signature Algorithm
+Digital Signature Algorithm(Base on OpenSSL Builds)
 -------------
 
 1. `RSA`
@@ -107,7 +107,7 @@ SSL/TLS Extensions
 1. `Application-Layer Protocol Negotiation(ALPN)`
 2. `Server Name Indication(SNI)`
 
-SSL/TLS Versions
+SSL/TLS Versions(Base on OpenSSL Builds)
 -------------
 
 1. `SSLv2(Deprecated)`

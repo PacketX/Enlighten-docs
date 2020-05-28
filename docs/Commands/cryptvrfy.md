@@ -64,30 +64,7 @@ $ echo $?
 
 執行完後檢查回傳值：`echo $?`，`0`為正確，`2`為錯誤。
 
-Example 3 列出可用的SSL版本
-------------
-
-```
-$ cryptvrfy ssl-version
-SSLv3
-TLSv1.0
-TLSv1.1
-TLSv1.2
-TLSv1.3
-
-$ cryptvrfy ssl-version --json
-{
-   "SSLVersion": [
-     "SSLv3",
-     "TLSv1.0",
-     "TLSv1.1",
-     "TLSv1.2",
-     "TLSv1.3"
-   ]
- }
-```
-
-Example 4 驗證SSL版本
+Example 3 驗證SSL版本
 -----------
 
 ```

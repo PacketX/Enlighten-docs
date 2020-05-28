@@ -1,89 +1,6 @@
 Nethook Configuration
 ===============
 
-Example
----------
-
-```
-{
-    "MessageLog": true,
-    "ErrorLog": true,
-    "MaxCore": 1,
-    "LAN": "P0",
-    "WAN": "P3",
-    "TAP": "pktx0",
-    "PacketModule": "pfpacket_ring",
-    "MTU": 1450,
-    "TrackingTableName": "ST1",
-    "ExternalIpv4Address": [Don't Change Default Value
-    ],
-    "ExternalIpv6Address": [
-    ],
-    "ARPCache": false,
-    "NDPCache": false,
-
-    /* TCP */
-    "TCPRedirectPolicy": {
-        "LAN": [
-            {
-                "SourceIpAddress": [],
-                "SourcePort": [],
-                "DestinationIpAddress": [],
-                "DestinationPort": [ 80 ]
-            }
-        ],
-        "WAN": [
-            {
-                "SourceIpAddress": [],
-                "SourcePort": [ 80 ],
-                "DestinationIpAddress": [],
-                "DestinationPort": []
-            }
-        ],
-        "RedirectPort": 3128
-    },
-    /* TCP-SSL */
-    "SSLRedirectPolicy": {
-        "LAN": [
-            {
-                "SourceIpAddress": [],
-                "SourcePort": [],
-                "DestinationIpAddress": [],
-                "DestinationPort": [ 443 ]
-            }
-        ],
-        "WAN": [
-            {
-                "SourceIpAddress": [],
-                "SourcePort": [ 443 ],
-                "DestinationIpAddress": [],
-                "DestinationPort": []
-            }
-        ],
-        "RedirectPort": 3129
-    },
-    /* UDP-gQUIC */
-    "UDPDropPolicy": {
-        "LAN": [
-            {
-                "SourceIpAddress": [],
-                "SourcePort": [],
-                "DestinationIpAddress": [],
-                "DestinationPort": [ 443 ]
-            }
-        ],
-        "WAN": [
-            {
-                "SourceIpAddress": [],
-                "SourcePort": [ 443 ],
-                "DestinationIpAddress": [],
-                "DestinationPort": []
-            }
-        ]
-    }
-}
-```
-
 Configuration
 -----------
 
@@ -94,8 +11,8 @@ Configuration
 |      MessageLog     |     Message Log     |     Boolean     |     Checkbox    |                        -                       |              -             |
 |       ErrorLog      |      Error Log      |     Boolean     |     Checkbox    |                        -                       |              -             |
 |       MaxCore       |          -          |     Integer     |        -        |                 Must equal to 1                |              -             |
-|         LAN         |      LAN     |      String     |  Select Option  | All AliasName Value of [GET /template/interface](05.Template.md#wizard_step2) |              -             |
-|         WAN         |       WAN      |      String     |  Select Option  | All AliasName Value of [GET /template/interface](05.Template.md#wizard_step2) |              -             |
+|         LAN         |      LAN     |      String     |  Select Option  | - |              -             |
+|         WAN         |       WAN      |      String     |  Select Option  | - |              -             |
 |         TAP         |          -          |      String     |        -        |                        -                       | Don't Change Default Value |
 |     PacketModule    |          -          |      String     |        -        |                        -                       | Don't Change Default Value |
 |         MTU         |         MTU         |     Integer     | Textbox(Number) |                  1000 to 1500                  |              -             |

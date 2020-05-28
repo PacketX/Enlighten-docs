@@ -1,8 +1,6 @@
 Enlighten
 ================
 
-**`This site is automatically generated, some pages are disabled.`**
-
 Features
 ------------
 
@@ -27,6 +25,7 @@ Features
 * Perfect Forward Secrecy。
 * Secure Renegotiation。
 * Downgrade Attack Prevention。
+* [統計資訊](#statistics)。
 
 Proxy
 -------------
@@ -44,14 +43,14 @@ Dynamic Generating Forged Certificates
 
 * Proxy mode為`SSL/TLS to SSL/TLS`時，會根據Server憑證資訊動態簽出一個憑證給Client。
 
-Key Exchange(Base on OpenSSL Builds)
+Key Exchange(Base on OpenSSL Built)
 -------------
 
 1. `ECDHE`
 2. `DHE`
 3. `RSA`
 
-Supported Named Groups(Base on OpenSSL Builds)
+Supported Named Groups(Base on OpenSSL Built)
 -------------
 
 1. `X25519`
@@ -117,51 +116,105 @@ SSL/TLS Versions(Base on OpenSSL Builds)
 5. `TLSv1.2`
 6. `TLSv1.3`
 
-Statistics
--------------
+<h2 id="statistics">Statistics</h2>
 
-1. `Accepting downstream`
-2. `Accepting downstream denied`
-3. `Accepted downstream`
-4. `Connecting upstream`
-5. `Connecting upstream timeout`
-6. `Connecting upstream reset`
-7. `Connected upstream`
-8. `TCP session concurrent`
-9. `TCP established`
-10. `SSL peek ClientHello timeout`
-11. `Is not SSL`
-12. `Block SNI`
-13. `Bypass SNI`
-14. `SSL connecting upstream`
-15. `SSL connecting upstream timeout`
-16. `SSL connecting upstream failed`
-17. `SSL connected upstream`
-18. `SSL accepting downstream`
-19. `SSL accepting downstream timeout`
-20. `SSL accepting downstream failed`
-21. `SSL accepted downstream`
-22. `SSL established`
-23. `SSL session concurrent`
-24. `Downstream recevied bytes`
-25. `Downstream sent bytes`
-26. `Upstream recevied bytes`
-27. `Upstream sent bytes`
-28. `Downstream recevied bytes per second`
-29. `Downstream sent bytes per second`
-30. `Upstream recevied bytes per second`
-31. `Upstream sent bytes per sencod`
-32. `TCP session concurrent peak`
-33. `SSL session concurrent peak`
-34. `Downstream recevied bytes per second peak`
-35. `Downstream sent bytes per second peak`
-36. `Upstream recevied bytes per second peak`
-37. `Upstream sent bytes per sencod peak`
-38. `Certificate in cache`
-39. `Downstream SSL version`
-40. `Upstream SSL version`
-41. `Downstream SSL cipher`
-42. `Upstream SSL cipher`
+1. `Decryption side accepting downstream`
+2. `Decryption side accepted downstream`
+3. `Encryption side accepting downstream`
+4. `Encryption side accepted downstream`
+5. `Accepting downstream denied`
+6. `Accepting downstream`
+7. `Accepted downstream`
+8. `Decryption side connecting upstream`
+9. `Decryption side connecting upstream timeout`
+10. `Decryption side connecting upstream reset`
+11. `Decryption side connected upstream`
+12. `Encryption side connecting upstream`
+13. `Encryption side connecting upstream timeout`
+14. `Encryption side connecting upstream reset`
+15. `Encryption side connected upstream`
+16. `Connecting upstream`
+17. `Connecting upstream timeout`
+18. `Connecting upstream reset`
+19. `Connected upstream`
+20. `Decryption side TCP established`
+21. `Encryption side TCP established`
+22. `Decryption side TCP session concurrent`
+23. `Encryption side TCP session concurrent`
+24. `TCP established`
+25. `TCP session concurrent`
+26. `SSL peek ClientHello timeout`
+27. `Is not SSL`
+28. `Block SNI`
+29. `Bypass SNI`
+30. `SSL connecting upstream`
+31. `SSL connecting upstream timeout`
+32. `SSL connecting upstream failed`
+33. `SSL connected upstream`
+34. `SSL accepting downstream`
+35. `SSL accepting downstream timeout`
+36. `SSL accepting downstream failed`
+37. `SSL established`
+38. `SSL session concurrent`
+39. `Decryption side downstream recevied bytes`
+40. `Decryption side downstream sent bytes`
+41. `Decryption side upstream recevied bytes`
+42. `Decryption side upstream sent bytes`
+43. `Encryption side downstream recevied bytes`
+44. `Encryption side downstream sent bytes`
+45. `Encryption side upstream recevied bytes`
+46. `Encryption side upstream sent bytes`
+47. `Downstream recevied bytes`
+48. `Downstream sent bytes`
+49. `Upstream recevied bytes`
+50. `Upstream sent bytes`
+51. `Decryption side downstream recevied bytes per second`
+52. `Decryption side downstream sent bytes per second`
+53. `Decryption side upstream recevied bytes per second`
+54. `Decryption side upstream sent bytes per second`
+55. `Encryption side downstream recevied bytes per second`
+56. `Encryption side downstream sent bytes per second`
+57. `Encryption side upstream recevied bytes per second`
+58. `Encryption side upstream sent bytes per second`
+59. `Downstream recevied bytes per second`
+60. `Downstream sent bytes per second`
+61. `Upstream recevied bytes per second`
+62. `Upstream sent bytes per second`
+63. `Decryption side downstream recevied bytes per second peak`
+64. `Decryption side downstream sent bytes per second peak`
+65. `Decryption side upstream recevied bytes per second peak`
+66. `Decryption side upstream sent bytes per second peak`
+67. `Encryption side downstream recevied bytes per second peak`
+68. `Encryption side downstream sent bytes per second peak`
+69. `Encryption side upstream recevied bytes per second peak`
+70. `Encryption side upstream sent bytes per second peak`
+71. `Downstream recevied bytes per second peak`
+72. `Downstream sent bytes per second peak`
+73. `Upstream recevied bytes per second peak`
+74. `Upstream sent bytes per second peak`
+75. `Decryption side TCP session concurrent peak`
+76. `Encryption side TCP session concurrent peak`
+77. `TCP session concurrent peak`
+78. `SSL session concurrent peak`
+79. `Certificate in cache`
+80. `Downstream SSL version`
+    * `SSLv2`
+    * `SSLv3`
+    * `TLSv1.0`
+    * `TLSv1.1`
+    * `TLSv1.2`
+    * `TLSv1.3`
+    * `Unknown`
+81. `Upstream SSL version`
+    * `SSLv2`
+    * `SSLv3`
+    * `TLSv1.0`
+    * `TLSv1.1`
+    * `TLSv1.2`
+    * `TLSv1.3`
+    * `Unknown`
+82. `Downstream SSL cipher`
+83. `Upstream SSL cipher`
 
 <h2 id="ns">Network Simulator</h2>
 
@@ -236,8 +289,8 @@ Statistics
 
 <h3>Forwarding Finished(MSG-ID: 9)</h3>
 
-* `<134>1 %Z - enlighten - 9 - BOM%P and %P SNI '%S', downstream received '%dr bytes', sent '%ds bytes', upstream received '%ur bytes', sent '%us bytes'`
-* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 9 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 SNI 'www.example.com', downstream received '32 bytes', sent '128 bytes', upstream received '128 bytes', sent '32 bytes'`
+* `<134>1 %Z - enlighten - 9 - BOM%P and %P SNI '%S' downstream received '%dr bytes', sent '%ds bytes', upstream received '%ur bytes', sent '%us bytes'`
+* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 9 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 SNI 'www.example.com' downstream received '32 bytes', sent '128 bytes', upstream received '128 bytes', sent '32 bytes'`
 
 <h3>SSL Peek ClientHello Timeout(MSG-ID: 10)</h3>
 
@@ -251,8 +304,8 @@ Statistics
 
 <h3>JA3(MSG-ID: 12)</h3>
 
-* `<134>1 %Z - enlighten - 12 - BOM%P and %P JA3 SNI '%S', string '%J'`
-* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 12 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 JA3 SNI 'www.example.com', string '771,49196-49162-49195-52393-49161-49200-49172-49199-52392-49171-159-57-56-107-158-52394-51-50-103-22-19-157-53-61-156-47-60-10-5-4,0-65281-10-11-13,29-23-24-25,0'`
+* `<134>1 %Z - enlighten - 12 - BOM%P and %P JA3 SNI '%S' string '%J'`
+* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 12 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 JA3 SNI 'www.example.com' string '771,49196-49162-49195-52393-49161-49200-49172-49199-52392-49171-159-57-56-107-158-52394-51-50-103-22-19-157-53-61-156-47-60-10-5-4,0-65281-10-11-13,29-23-24-25,0'`
 
 <h3>BlockSNI(MSG-ID: 13)</h3>
 
@@ -281,7 +334,7 @@ Statistics
 
 <h3>JA3S(MSG-ID: 18)</h3>
 
-* `<134>1 %Z - enlighten - 18 - BOM%P and %P JA3S SNI '%S', string '%J'`
+* `<134>1 %Z - enlighten - 18 - BOM%P and %P JA3S SNI '%S' string '%J'`
 * `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 18 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 JA3S SNI 'www.example.com' string '771,49196,65281-0-11-35-23'`
 
 <h3>SSL Connected Upstream(MSG-ID: 19)</h3>
@@ -318,9 +371,9 @@ Statistics
 
 憑證相關資訊只用一條訊息送出，`disabled`的項目用`-`或`0`代替。
 
-* `<134>1 %Z - enlighten - 25 - BOM%P and %P SSL upstream SNI '%s' certificate '%d/%d' serial number: '%s', signature algorithm: '%s', not before: '%s'(%s), not after: '%s'(%s), issuer: '%s', subject: '%s', public key: '%s', '%u' bits, extension key usage: '%s', extension SAN, DNS: '%s', IPv4: '%s', IPv6: '%s', fingerprint(SHA1): '%s', fingerprint(SHA256): '%s'`
-* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 25 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 SSL SNI 'www.example.com' certificate '1/3' serial number: '47:e2:00:00:00:01:25:67:38:1f:16:b7:03:09:bb:0d', signature algorithm: 'sha256WithRSAEncryption', not before: 'Apr 17 10:41:32 2018 GMT'(Valid), not after: 'Apr 17 15:59:59 2020 GMT'(Not expired), issuer: '/C=TW/O=TAIWAN-CA/OU=Secure SSL Sub-CA/CN=TWCA Secure SSL Certification Authority', subject: '/C=TW/ST=Taiwan/L=Kaohsiung/O=National Kaohsiung University of Hospitality and Tourism/OU=edu/CN=*.nkuht.edu.tw', public key: 'RSA', '2048' bits, extension key usage: 'Digital Signature, Key Encipherment', extension SAN, DNS: '*.nkuht.edu.tw', IPv4: '', IPv6: '', fingerprint(SHA1): '20:95:ef:9b:6b:be:28:4a:eb:d3:06:27:7a:d9:6e:5058:3e:6a:40', fingerprint(SHA256): '8e:7c:d0:27:7d:0f:2a:1c:2e:93:45:5c:6f:19:08:69df:64:8b:19:ee:5f:77:4c:7d:d8:cb:cc:65:83:15:73'`
-* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 25 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 SSL SNI 'www.example.com' certificate '1/3' serial number: '40:01:33:53:e4:00:00:00:00:00:00:0c:ca:5d:1b:69', signature algorithm: 'sha256WithRSAEncryption', not before: 'Oct 28 07:38:31 2014 GMT'(Valid), not after: 'Oct 28 15:59:59 2030 GMT'(Not expired), issuer: '/C=TW/O=TAIWAN-CA/OU=Root CA/CN=TWCA Root Certification Authority', subject: '-', public key: 'RSA', '4096' bits, extension key usage: '-', extension SAN, DNS: '-', IPv4: '-', IPv6: '-', fingerprint(SHA1): '-', fingerprint(SHA256): '8a:d4:7f:6d:70:a4:4f:a8:0a:f0:f9:31:12:5f:fe:3a76:87:6f:fa:d2:19:a4:d4:0a:13:c0:38:dc:85:e6:9e'`
+* `<134>1 %Z - enlighten - 25 - BOM%P and %P SSL upstream SNI '%s' certificate '%d/%d' serial number: '%s', signature algorithm: '%s', not before: '%s'(%s), not after: '%s'(%s), issuer: '%s', subject: '%s', public key: '%s', '%u' bits, key usage: '%s', extension key usage: '%s', extension SAN, DNS: '%s', IPv4: '%s', IPv6: '%s', fingerprint(SHA1): '%s', fingerprint(SHA256): '%s'`
+* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 25 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 SSL SNI 'www.example.com' certificate '1/3' serial number: '47:e2:00:00:00:01:25:67:38:1f:16:b7:03:09:bb:0d', signature algorithm: 'sha256WithRSAEncryption', not before: 'Apr 17 10:41:32 2018 GMT'(Valid), not after: 'Apr 17 15:59:59 2020 GMT'(Not expired), issuer: '/C=TW/O=TAIWAN-CA/OU=Secure SSL Sub-CA/CN=TWCA Secure SSL Certification Authority', subject: '/C=TW/ST=Taiwan/L=Kaohsiung/O=National Kaohsiung University of Hospitality and Tourism/OU=edu/CN=*.nkuht.edu.tw', public key: 'RSA', '2048' bits, key usage: 'Digital Signature, Key Encipherment', extension key usage: 'TLS Web Server Authentication, TLS Web Client Authentication', extension SAN, DNS: '*.nkuht.edu.tw', IPv4: '', IPv6: '', fingerprint(SHA1): '20:95:ef:9b:6b:be:28:4a:eb:d3:06:27:7a:d9:6e:5058:3e:6a:40', fingerprint(SHA256): '8e:7c:d0:27:7d:0f:2a:1c:2e:93:45:5c:6f:19:08:69df:64:8b:19:ee:5f:77:4c:7d:d8:cb:cc:65:83:15:73'`
+* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 25 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 SSL SNI 'www.example.com' certificate '1/3' serial number: '40:01:33:53:e4:00:00:00:00:00:00:0c:ca:5d:1b:69', signature algorithm: 'sha256WithRSAEncryption', not before: 'Oct 28 07:38:31 2014 GMT'(Valid), not after: 'Oct 28 15:59:59 2030 GMT'(Not expired), issuer: '/C=TW/O=TAIWAN-CA/OU=Root CA/CN=TWCA Root Certification Authority', subject: '-', public key: 'RSA', '4096' bits, key usage: '-', extension key usage: '-', extension SAN, DNS: '-', IPv4: '-', IPv6: '-', fingerprint(SHA1): '-', fingerprint(SHA256): '8a:d4:7f:6d:70:a4:4f:a8:0a:f0:f9:31:12:5f:fe:3a76:87:6f:fa:d2:19:a4:d4:0a:13:c0:38:dc:85:e6:9e'`
 
 <h3>SSL Upstream Certificate Serial Number(MSG-ID: 26)</h3>
 
@@ -365,7 +418,7 @@ Statistics
 <h3>SSL Upstream Certificate Extension Key Usage(MSG-ID: 33)</h3>
 
 * `<134>1 %Z - enlighten - 33 - BOM%P and %P SSL upstream SNI '%S' certificate '%d/%d' extension key usage: '%s'`
-* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 33 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 SSL SNI 'www.example.com' certificate '1/3' extension key usage: 'Digital Signature, Key Encipherment'`
+* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 33 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 SSL SNI 'www.example.com' certificate '1/3' extension key usage: 'TLS Web Server Authentication, TLS Web Client Authentication'`
 
 <h3>SSL Upstream Certificate Extension SAN(MSG-ID: 34)</h3>
 
@@ -382,3 +435,93 @@ Statistics
 
 * `<134>1 %Z - enlighten - 36 - BOM%P and %P SSL upstream SNI '%S' certificate '%d/%d' fingerprint(SHA256): '%s'`
 * `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 36 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 SSL SNI 'www.example.com' certificate '1/3' fingerprint(SHA256): '8e:7c:d0:27:7d:0f:2d:1c:2e:93:45:5c:6f:19:08:69df:64:8b:20:ee:5f:77:4c:7d:d8:cb:cc:65:83:17:73'`
+
+<h3>SSL Upstream Certificate Key Usage(MSG-ID: 37)</h3>
+
+* `<134>1 %Z - enlighten - 37 - BOM%P and %P SSL upstream SNI '%S' certificate '%d/%d' key usage: '%s'`
+* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 37 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 SSL SNI 'www.example.com' certificate '1/3' key usage: 'Digital Signature, Key Encipherment'`
+
+<h3>Decryption Side Accepting Downstream(MSG-ID: 38)</h3>
+
+* `<134>1 %Z - enlighten - 38 - BOM%P and %P decrypt side TCP downstream is accepting`
+* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 38 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 decrypt side TCP downstream is accepting`
+
+<h3>Decryption Side Accepted Downstream(MSG-ID: 39)</h3>
+
+* `<134>1 %Z - enlighten - 39 - BOM%P and %P decrypt side TCP downstream is accepted`
+* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 39 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 decrypt side TCP downstream is accepted`
+
+<h3>Decryption Side Connecting Upstream(MSG-ID: 40)</h3>
+
+* `<134>1 %Z - enlighten - 40 - BOM%P and %P decrypt side TCP upstream is connecting`
+* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 40 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 decrypt side TCP upstream is connecting`
+
+<h3>Decryption Side Connecting Upstream Timeout(MSG-ID: 41)</h3>
+
+* `<133>1 %Z - enlighten - 41 - BOM%P and %P decrypt side TCP upstream connecting is timeout`
+* `<local0.notice>1 2020-03-03T02:02:02.000012Z - enlighten - 41 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 decrypt side TCP upstream connecting is timeout`
+
+<h3>Decryption Side Connecting Upstream Reset(MSG-ID: 42)</h3>
+
+* `<133>1 %Z - enlighten - 42 - BOM%P and %P decrypt side TCP upstream connecting is reset`
+* `<local0.notice>1 2020-03-03T02:02:02.000012Z - enlighten - 42 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 decrypt side TCP upstream connecting is reset`
+
+<h3>Decryption Side Connected Upstream(MSG-ID: 43)</h3>
+
+* `<134>1 %Z - enlighten - 43 - BOM%P and %P decrypt side TCP upstream is connected`
+* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 43 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 decrypt side TCP upstream is connected`
+
+<h3>Decryption Side TCP Established(MSG-ID: 44)</h3>
+
+* `<134>1 %Z - enlighten - 44 - BOM%P and %P decrypt side TCP stream proxy has been established`
+* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 44 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 decrypt side TCP stream proxy has been established`
+
+<h3>Decryption Side Forwarding Finished(MSG-ID: 45)</h3>
+
+* `<134>1 %Z - enlighten - 45 - BOM%P and %P decrypt side SNI '%S' downstream received '%dr bytes', sent '%ds bytes', upstream received '%ur bytes', sent '%us bytes'`
+* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 45 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 decrypt side SNI 'www.example.com' downstream received '146 bytes', sent '1763 bytes', upstream received '1763 bytes', sent '146 bytes'`
+
+<h3>Encryption Side Accepting Downstream(MSG-ID: 46)</h3>
+
+* `<134>1 %Z - enlighten - 46 - BOM%P and %P encrypt side TCP downstream is accepting`
+* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 46 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 encrypt side TCP downstream is accepting`
+
+<h3>Encryption Side Accepted Downstream(MSG-ID: 47)</h3>
+
+* `<134>1 %Z - enlighten - 47 - BOM%P and %P encrypt side TCP downstream is accepted`
+* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 47 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 encrypt side TCP downstream is accepted`
+
+<h3>Encryption Side Accepting Dowstream Timeout(MSG-ID: 48)</h3>
+
+* `<133>1 %Z - enlighten - 48 - BOM%P and %P encrypt side TCP downstream accepting is timeout`
+* `<local0.notice>1 2020-03-03T02:02:02.000012Z - enlighten - 48 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 encrypt side TCP downstream accepting is timeout`
+
+<h3>Encryption Side Connecting Upstream(MSG-ID: 49)</h3>
+
+* `<134>1 %Z - enlighten - 49 - BOM%P and %P encrypt side TCP upstream is connecting`
+* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 49 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 encrypt side TCP upstream is connecting`
+
+<h3>Encryption Side Connecting Upstream Timeout(MSG-ID: 50)</h3>
+
+* `<133>1 %Z - enlighten - 50 - BOM%P and %P encrypt side TCP upstream connecting is timeout`
+* `<local0.notice>1 2020-03-03T02:02:02.000012Z - enlighten - 50 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 encrypt side TCP upstream connecting is timeout`
+
+<h3>Encryption Side Connecting Upstream Reset(MSG-ID: 51)</h3>
+
+* `<133>1 %Z - enlighten - 51 - BOM%P and %P encrypt side TCP upstream connecting is reset`
+* `<local0.notice>1 2020-03-03T02:02:02.000012Z - enlighten - 51 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 encrypt side TCP upstream connecting is reset`
+
+<h3>Encryption Side Connected Upstream(MSG-ID: 52)</h3>
+
+* `<134>1 %Z - enlighten - 52 - BOM%P and %P encrypt side TCP upstream is connected`
+* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 52 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 encrypt side TCP upstream is connected`
+
+<h3>Encryption Side TCP Established(MSG-ID: 53)</h3>
+
+* `<134>1 %Z - enlighten - 53 - BOM%P and %P encrypt side TCP stream proxy has been established`
+* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 53 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 encrypt side TCP stream proxy has been established`
+
+<h3>Encryption Side Forwarding Finished(MSG-ID: 54)</h3>
+
+* `<134>1 %Z - enlighten - 54 - BOM%P and %P encrypt side SNI '%S' downstream received '%dr bytes', sent '%ds bytes', upstream received '%ur bytes', sent '%us bytes'`
+* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 54 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 encrypt side SNI 'www.example.com' downstream received '146 bytes', sent '1763 bytes', upstream received '1763 bytes', sent '146 bytes'`

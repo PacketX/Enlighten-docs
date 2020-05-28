@@ -1,5 +1,4 @@
 * [Enlighten](Enlighten.md)
-* [Introduction](Introduction.md)
 * Configuration
 	* [Enlighten](Configuration/Enlighten-Configuration.md)
 	* [Nethook](Configuration/Nethook-Configuration.md)

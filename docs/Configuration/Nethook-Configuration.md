@@ -21,19 +21,19 @@ Configuration
 | ExternalIpv6Address |          -          | Array of String |        -        |                        -                       | Don't Change Default Value |
 |       ARPCache      |          -          |     Boolean     |        -        |                        -                       | Don't Change Default Value |
 |       NDPCache      |          -          |     Boolean     |        -        |                        -                       | Don't Change Default Value |
-|  TCPRedirectPolicy  | TCP Reidrect Policy |      Object     |        -        |                        Must Exist                       |    See [Policy](#policy)   |
-|  SSLRedirectPolicy  | SSL Redirect Policy |      Object     |        -        |                        Must Exist                       |    See [Policy](#policy)   |
-|  UDPDropPolicy  | UDP Drop Policy |      Object     |        -        |                        Must Exist                       |    See [Policy](#policy)   |
+|  TCPRedirectPolicy  | TCP Reidrect Policy |      Object     |        -        |                        Must Exist                       |    See [Policy](#Policy)   |
+|  SSLRedirectPolicy  | SSL Redirect Policy |      Object     |        -        |                        Must Exist                       |    See [Policy](#Policy)   |
+|  UDPDropPolicy  | UDP Drop Policy |      Object     |        -        |                        Must Exist                       |    See [Policy](#Policy)   |
 
-<h3 id="policy">Policy</h3>
+<h3 id="Policy">Policy</h3>
 
 |      Key     |     Prompt    |    Json Type    |      Style      | Validation |             Note            |
 |:------------:|:-------------:|:---------------:|:---------------:|:----------:|:---------------------------:|
-|      LAN     |   LAN  | Array of Object |        -        |      Must Exist     |   See [4-Tuple](#4_tuple)   |
-|      WAN     |   WAN  | Array of Object |        -        |      Must Exist     |   See [4-Tuple](#4_tuple)   |
+|      LAN     |   LAN  | Array of Object |        -        |      Must Exist     |   See [4-Tuple](#4_Tuple)   |
+|      WAN     |   WAN  | Array of Object |        -        |      Must Exist     |   See [4-Tuple](#4_Tuple)   |
 | RedirectPort | Redirect Port |     Integer     | Textbox(Number) |   0-65535  | Don't Show on UDPDropPolicy |
 
-<h3 id="4_tuple">4-Tuple</h3>
+<h3 id="4_Tuple">4-Tuple</h3>
 
 |          Key         |         Prompt         |              Json Type              |            Style            |  Validation  |              Note             |
 |:--------------------:|:----------------------:|:-----------------------------------:|:---------------------------:|:------------:|:-----------------------------:|

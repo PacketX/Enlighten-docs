@@ -11,8 +11,8 @@ Features
 * `SSL/TLS` [Cipher Suite](https://www.openssl.org/docs/man1.1.1/man1/ciphers.html)列表。
 * `SSL/TLS` 版本控制，`SSLv2(Deprecated)`、`SSLv3`、`TLSv1.0`、`TLSv1.1`、`TLSv1.2`、`TLSv1.3`。
 * `IPv4/IPv6`。
-* [Network Simulator](#ns)。
-* [Syslog](#syslog)。
+* [Network Simulator](#NS)。
+* [Syslog](#Syslog)。
 * [`JA3`](https://engineering.salesforce.com/tls-fingerprinting-with-ja3-and-ja3s-247362855967)、[`JA3S`](https://engineering.salesforce.com/tls-fingerprinting-with-ja3-and-ja3s-247362855967)。
 * `TLSv1.3` Early Data(0-RTT)。
 *  頻寬控制。
@@ -25,7 +25,7 @@ Features
 * Perfect Forward Secrecy。
 * Secure Renegotiation。
 * Downgrade Attack Prevention。
-* [統計資訊](#statistics)。
+* [統計資訊](#Statistics)。
 
 Proxy
 -------------
@@ -116,7 +116,7 @@ SSL/TLS Versions(Base on OpenSSL Builds)
 5. `TLSv1.2`
 6. `TLSv1.3`
 
-<h2 id="statistics">Statistics</h2>
+<h2 id="Statistics">Statistics</h2>
 
 1. `Decryption side accepting downstream`
 2. `Decryption side accepted downstream`
@@ -216,14 +216,14 @@ SSL/TLS Versions(Base on OpenSSL Builds)
 82. `Downstream SSL cipher`
 83. `Upstream SSL cipher`
 
-<h2 id="ns">Network Simulator</h2>
+<h2 id="NS">Network Simulator</h2>
 
 1. 網路模擬功能會將解密的資料再以封包方式拋出，讓外部的IDS設備接收分析。
 2. 可儲存成`.pcap`封包檔案。
 3. 可將原始資料儲存成檔案。
 4. 可根據`5-tuple`、`Domain`以及`Certificate fingerprint`(`sha256`)來禁止模擬送出或儲存。
 
-<h2 id="syslog">Syslog</h2>
+<h2 id="Syslog">Syslog</h2>
 
 1. `Syslog`採用[`RFC 5424`](https://tools.ietf.org/html/rfc5424)。
 2.  大致格式為: `<priority(Facility + Level)>VERSION TIMESTAMP(ISO-8601) HOSTNAME APPLICATION PID MESSAGE-ID STRUCTURED-DATA MSG`。

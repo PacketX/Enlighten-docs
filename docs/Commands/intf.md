@@ -13,18 +13,18 @@ Network interface information for Enlighten
 
 List available network interface infromation
     list
-        --json,       -j    output in json format
-        --interface,  -i    interface name, alias name is also works
+        --json,       -j    Output in json format
+        --interface,  -i    Interface name, alias name is also works
 
 List TUN/TAP interface information
     tap
-        --json,       -j    output in json format
-        --interface,  -i    interface name, alias name is also works
+        --json,       -j    Output in json format
+        --interface,  -i    Interface name, alias name is also works
 
 Retrieve network interface statistics
     statistics
-        --json,       -j    output in json format
-        --interface,  -i    interface name, alias name is also works
+        --json,       -j    Output in json format
+        --interface,  -i    Interface name, alias name is also works
 
 Print the help
     help

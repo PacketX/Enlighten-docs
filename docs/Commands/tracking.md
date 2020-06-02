@@ -13,7 +13,7 @@ Manipulate the Enlighten connection tracking table
 
 Tracking table to list
     list
-        --name,  -n    tracking table name
+        --name,  -n    Tracking table name
 
 Print the help
     help

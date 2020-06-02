@@ -13,8 +13,8 @@ Kerctl, configure kernel parameters at runtime
 
 Set kernel state
     core
-        --configure,  -c    configuration file
-        --test,       -t    test configuration file
+        --configure,  -c    Configuration file
+        --test,       -t    Test configuration file
 
 Print the help
     help

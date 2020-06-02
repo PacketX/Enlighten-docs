@@ -66,3 +66,7 @@ Aid
 <h3>cryptvrfy</h3>
 
 驗證或取得`OpenSSL`相關可用參數。
+
+<h3>upelt</h3>
+
+更新`Enlighten`輔助工具。

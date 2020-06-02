@@ -13,16 +13,16 @@ Verify SSL and cryptography related parameters
 
 Verify curve list
     curve-list
-        --curve-list,  -c    curve list to verify
+        --curve-list,  -c    Curve list to verify
 
 Verify SSL ciphers
     ciphers
-        --ciphers,     -c    ciphers to verify
+        --ciphers,     -c    Ciphers to verify
 
 Verify SSL version
     ssl-version
         --ssl-version,  -s    SSL version string to verify
-        --json,         -j    output in json format
+        --json,         -j    Output in json format
 
 Print the help
     help

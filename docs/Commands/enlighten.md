@@ -13,8 +13,8 @@ Enlighten, proxy anything
 
 Main Enlighten event loop
     core
-        --configure,  -c    configuration file
-        --test,       -t    test configuration file
+        --configure,  -c    Configuration file
+        --test,       -t    Test configuration file
 
 Print the help
     help

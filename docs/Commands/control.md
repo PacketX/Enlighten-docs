@@ -17,17 +17,17 @@ Start the Enlighten
 Stop the Enlighten
     stop
         --pid,   -p    Enlighten process ID
-        --wait,  -w    waiting seconds, default: 10 seconds
+        --wait,  -w    Waiting seconds, default: 10 seconds
 
 Stop the Enlighten immediately
     quit
         --pid,   -p    Enlighten process ID
-        --wait,  -w    waiting seconds, default: 10 seconds
+        --wait,  -w    Waiting seconds, default: 10 seconds
 
 Restart the Enlighten
     restart
         --pid,   -p    Enlighten process ID
-        --wait,  -w    waiting seconds, default: 10 seconds
+        --wait,  -w    Waiting seconds, default: 10 seconds
 
 Force stop the Enlighten
     kill
@@ -45,13 +45,13 @@ Start the www
 
 Stop the www
     stop-www
-        --pid,   -p    www process ID
-        --wait,  -w    waiting seconds, default: 10 seconds
+        --pid,   -p    Www process ID
+        --wait,  -w    Waiting seconds, default: 10 seconds
 
 Restart the www
     restart-www
-        --pid,   -p    www process ID
-        --wait,  -w    waiting seconds, default: 10 seconds
+        --pid,   -p    Www process ID
+        --wait,  -w    Waiting seconds, default: 10 seconds
 
 Force stop the www
     kill-www

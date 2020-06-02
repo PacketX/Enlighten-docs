@@ -21,3 +21,4 @@
 		* [config](Commands/config.md)
 		* [kerctl](Commands/kerctl.md)
 		* [cryptvrfy](Commands/cryptvrfy.md)
+		* [upelt](Commands/upelt.md)

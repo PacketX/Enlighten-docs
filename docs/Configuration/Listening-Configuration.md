@@ -31,6 +31,8 @@ Configuration
 |          ProxyTimeout         |           Proxy Timeout          |     Integer     |        Textbox(Number)        |      Greater Than 0     |                       -                      |
 |          DownloadRate         |           Download Rate          |     Integer     |        Textbox(Number)        |            -            |                       -                      |
 |           UploadRate          |            Upload Rate           |     Integer     |        Textbox(Number)        |            -            |                       -                      |
+|           IPv6          |            IPv6           |     Boolean     |            Checkbox           |            -            |                       -                      |
+|           IPv6Only          |            IPv6 Only           |     Boolean     |            Checkbox           |            -            |                       -                      |
 |              JA3              |                JA3               |     Boolean     |            Checkbox           |            -            |                       -                      |
 |              JA3S             |               JA3S               |     Boolean     |            Checkbox           |            -            |                       -                      |
 |              Deny             |               Deny               |      Object     |               -               |        Must Exist       |             See [Bundle](#Bundle)            |

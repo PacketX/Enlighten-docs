@@ -16,7 +16,7 @@ List all named shared memory
 
 Destroy named shared memory
     destroy
-        --name,  -n    shared memory name to destroy
+        --name,  -n    Shared memory name to destroy
 
 Clear all named shared memory that belong to Enlighten
     clear

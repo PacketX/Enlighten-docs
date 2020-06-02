@@ -3,11 +3,42 @@ information
 
 `Enlighten`的組態、參數，第三方相依性資訊。
 
+Help
+-----------
+
+```
+$ information
+Usage: information [GROUP] [OPTION...]
+Anything information about Enlighten
+
+Requiring specific information
+    core
+        --prefix,         -p    Append prefix
+        --bug,            -m    Bug report address
+        --timestamp,      -t    Timestamp of build-time
+        --libelt,         -l    Enlighten library version
+        --sys-types,      -s    System types
+        --compiler,       -C    C and Go compiler
+        --git,            -g    Git information
+        --defaults,       -d    Default files
+        --commands,       -c    Enlighten commands
+        --sys-commands,   -S    System command
+        --extensions,     -e    Extensions
+        --configuration,  -a    ./configure time values
+        --3-party,        -3    Third party library information
+        --json,           -j    Output in json format
+
+Print the help
+    help
+
+Report bugs to <tubear.chen@packetx.biz>.
+```
+
 Example 1 輸出全部資訊
 -------------
 
 ```
-$ information info
+$ information core
 Prefix: /usr/local/Enlighten
 BugReportAddress: tubear.chen@packetx.biz
 BuildTimestamp: 2020-05-22T08:29:03+0800
@@ -195,7 +226,7 @@ Example 2 輸出特定資訊
 -------------
 
 ```
-$ information info --configuration --bug --json
+$ information core --configuration --bug --json
 {
    "BugReportAddress": "tubear.chen@packetx.biz",
    "Configuration": {

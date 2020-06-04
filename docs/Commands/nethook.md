@@ -50,4 +50,4 @@ $ echo $?
 Configuration
 -------------
 
-See [Nethook Configuration](../UI/07.Nethook-Configuration.md)。
+See [Nethook Configuration](Configuration/Nethook-Configuration.md)。

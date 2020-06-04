@@ -64,4 +64,4 @@ $ echo $?
 Configuration
 -------------
 
-See [Enlighten Configuration](../UI/06.Enlighten-Configuration.md)。
+See [Enlighten Configuration](Configuration/Enlighten-Configuration.md)。

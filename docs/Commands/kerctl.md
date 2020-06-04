@@ -58,4 +58,4 @@ $ echo $?
 Configuration
 -------------
 
-See [kerctl Configuration](../UI/09.kerctl-Configuration.md)。
+See [kerctl Configuration](../Configuration/kerctl-Configuration.md)。

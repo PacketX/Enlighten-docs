@@ -50,4 +50,4 @@ $ echo $?
 Configuration
 -------------
 
-See [Listening Configuration](../UI/08.Listening-Configuration.md)。
+See [Listening Configuration](Configuration/Listening-Configuration.md)。

@@ -21,18 +21,19 @@ Configuration
 |            Backlog            |              Backlog             |     Integer     |        Textbox(Number)        | Greater or Equal to 511 |                       -                      |
 |         MaxConcurrent         |                 -                |     Integer     |               -               |            -            |          Don't Change Default Value          |
 |       TrackingTableName       |                 -                |      String     |               -               |            -            |          Don't Change Default Value          |
-|        TimerResolution        |         Timer Resolution         |     Integer     |        Textbox(Number)        |            -            |                       -                      |
+|        TimerResolution        |         Timer Resolution         |     Integer     |        Textbox(Number)        | Greater or Equal to 0 |                       -                      |
 |           KeepAccept          |            Keep Accept           |     Boolean     |            Checkbox           |            -            |                       -                      |
 |           TCPNoDelay          |           TCP No Delay           |     Boolean     |            Checkbox           |            -            |                       -                      |
 |          TCPKeepAlive         |          TCP Keep Alive          |     Boolean     |            Checkbox           |            -            |                       -                      |
 |        ProxyBufferSize        |         Proxy Buffer Size        |     Integer     |        Textbox(Number)        |      Greater Than 0     |                       -                      |
 |         ConnectTimeout        |          Connect Timeout         |     Integer     |        Textbox(Number)        |      Greater Than 0     |                       -                      |
-|          ConnectRetry         |           Connect Retry          |     Integer     |        Textbox(Number)        |            -            |                       -                      |
+|          ConnectRetry         |           Connect Retry          |     Integer     |        Textbox(Number)        | Greater or Equal to 0 |                       -                      |
 |          ProxyTimeout         |           Proxy Timeout          |     Integer     |        Textbox(Number)        |      Greater Than 0     |                       -                      |
-|          DownloadRate         |           Download Rate          |     Integer     |        Textbox(Number)        |            -            |                       -                      |
-|           UploadRate          |            Upload Rate           |     Integer     |        Textbox(Number)        |            -            |                       -                      |
+|          DownloadRate         |           Download Rate          |     Integer     |        Textbox(Number)        | Greater or Equal to 0 |                       -                      |
+|           UploadRate          |            Upload Rate           |     Integer     |        Textbox(Number)        | Greater or Equal to 0 |                       -                      |
 |           IPv6          |            IPv6           |     Boolean     |            Checkbox           |            -            |                       -                      |
 |           IPv6Only          |            IPv6 Only           |     Boolean     |            Checkbox           |            -            |                       -                      |
+|         GracefulTimeout        |          Graceful Timeout         |     Integer     |        Textbox(Number)        |      Greater Than 0     |                       -                      |
 |              JA3              |                JA3               |     Boolean     |            Checkbox           |            -            |                       -                      |
 |              JA3S             |               JA3S               |     Boolean     |            Checkbox           |            -            |                       -                      |
 |              Deny             |               Deny               |      Object     |               -               |        Must Exist       |             See [Bundle](#Bundle)            |

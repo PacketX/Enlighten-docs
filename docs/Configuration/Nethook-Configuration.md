@@ -10,7 +10,7 @@ Configuration
 |:-------------------:|:-------------------:|:---------------:|:---------------:|:----------------------------------------------:|:--------------------------:|
 |      MessageLog     |     Message Log     |     Boolean     |     Checkbox    |                        -                       |              -             |
 |       ErrorLog      |      Error Log      |     Boolean     |     Checkbox    |                        -                       |              -             |
-|       MaxCore       |          -          |     Integer     |        -        |                 Must equal to 1                |              -             |
+|       MaxCore       |          -          |     Integer     |        -        |                 -                | Don't Change Default Value |
 |         LAN         |      LAN     |      String     |  Select Option  | - |              -             |
 |         WAN         |       WAN      |      String     |  Select Option  | - |              -             |
 |         TAP         |          -          |      String     |        -        |                        -                       | Don't Change Default Value |
@@ -21,6 +21,7 @@ Configuration
 | ExternalIpv6Address |          -          | Array of String |        -        |                        -                       | Don't Change Default Value |
 |       ARPCache      |          -          |     Boolean     |        -        |                        -                       | Don't Change Default Value |
 |       NDPCache      |          -          |     Boolean     |        -        |                        -                       | Don't Change Default Value |
+|         GracefulTimeout        |          Graceful Timeout         |     Integer     |        Textbox(Number)        |      Greater Than 0     |                       -                      |
 |  TCPRedirectPolicy  | TCP Reidrect Policy |      Object     |        -        |                        Must Exist                       |    See [Policy](#Policy)   |
 |  SSLRedirectPolicy  | SSL Redirect Policy |      Object     |        -        |                        Must Exist                       |    See [Policy](#Policy)   |
 |  UDPDropPolicy  | UDP Drop Policy |      Object     |        -        |                        Must Exist                       |    See [Policy](#Policy)   |

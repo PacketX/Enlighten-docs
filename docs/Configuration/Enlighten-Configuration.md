@@ -10,3 +10,4 @@ Configuration
 |:------------:|:-----------:|:---------:|:-------------:|:----------------------------------------------:|:--------------------------:|
 |  MessageLog  | Message Log |  Boolean  |    Checkbox   |                        -                       |              -             |
 |   ErrorLog   |  Error Log  |  Boolean  |    Checkbox   |                        -                       |              -             |
+|         GracefulTimeout        |          Graceful Timeout         |     Integer     |        Textbox(Number)        |      Greater Than 0     |                       -                      |

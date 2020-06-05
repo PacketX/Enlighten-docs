@@ -208,7 +208,7 @@ Example 12 列出程序資訊
 
 ```
 $ sudo control proc-list
-      Name        PID        Location   Position   CPU List
+      Name        PID        Location   Position   CPU-List
  Enlighten      17166               -       Core        0-3
        www      17142               -          -        0-3
    Nethook      17272           pktx2     Master        0-3

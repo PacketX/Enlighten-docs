@@ -58,6 +58,7 @@ Force stop the www
 
 Print running process information
     proc-list
+        --json,  -j    Output in json format
 
 Print the help
     help

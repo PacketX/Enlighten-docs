@@ -19,7 +19,7 @@ Stop the Enlighten
         --pid,   -p    Enlighten process ID
         --wait,  -w    Waiting seconds, default: 10 seconds
 
-Stop the Enlighten immediately
+Stop the Enlighten gracefully
     quit
         --pid,   -p    Enlighten process ID
         --wait,  -w    Waiting seconds, default: 10 seconds
@@ -38,6 +38,10 @@ Rotate the Enlighten log
 
 Reload the Enlighten
     reload
+        --pid,   -p    Enlighten process ID
+
+Stop the Enlighten workers gracefully
+    graceful-quit
         --pid,   -p    Enlighten process ID
 
 Start the www
@@ -79,7 +83,7 @@ control: 'enlighten' is running
 
 啟動必須使用root權限。
 
-Example 2 停止`Enlighten`
+Example 2 馬上停止`Enlighten`
 -----------
 
 ```
@@ -91,9 +95,9 @@ $ sudo control stop
 control: 'enlighten' is not running
 ```
 
-停止必須使用root權限。
+馬上停止必須使用root權限。
 
-Example 3 馬上停止`Enlighten`
+Example 3 停止`Enlighten`
 -------------
 
 ```
@@ -105,7 +109,7 @@ $ sudo control quit
 control: 'enlighten' is not running
 ```
 
-馬上停止必須使用root權限。
+停止必須使用root權限。
 
 Example 4 重新啟動`Enlighten`
 -------------
@@ -151,7 +155,16 @@ $ sudo control reload
 
 重新讀取設定檔必須使用root權限；重新讀取只能重讀部分內容。
 
-Example 8 啟動`www`
+Example 8 優雅關閉`Enlighten`
+------------
+
+```
+$ sudo control graceful-quit
+```
+
+優雅關閉必須使用root權限；會等待全部連線結束後再退出。
+
+Example 9 啟動`www`
 -----------
 
 ```
@@ -164,7 +177,7 @@ control: 'www' is running
 
 啟動必須使用root權限。
 
-Example 9 停止`www`
+Example 10 停止`www`
 -----------
 
 ```
@@ -178,7 +191,7 @@ control: 'www' is not running
 
 停止必須使用root權限。
 
-Example 10 重新啟動`www`
+Example 11 重新啟動`www`
 -------------
 
 ```
@@ -195,7 +208,7 @@ $ sudo control stop-www
 $ sudo control start-www
 ```
 
-Example 11 強迫停止`www`
+Example 12 強迫停止`www`
 ------------
 
 ```
@@ -204,7 +217,7 @@ $ sudo control kill-www
 
 強迫停止必須使用root權限。
 
-Example 12 列出程序資訊
+Example 13 列出程序資訊
 ------------
 
 ```

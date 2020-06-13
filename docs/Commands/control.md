@@ -1,7 +1,7 @@
 control
 ===========
 
-管理`Enlighten`和`www`啟動、關閉、重新啟動、log輪替...等動作。
+Control the `Enlighten` and `www`.
 
 Help
 -----------
@@ -19,7 +19,7 @@ Stop the Enlighten
         --pid,   -p    Enlighten process ID
         --wait,  -w    Waiting seconds, default: 10 seconds
 
-Stop the Enlighten gracefully
+Quit the Enlighten
     quit
         --pid,   -p    Enlighten process ID
         --wait,  -w    Waiting seconds, default: 10 seconds
@@ -70,7 +70,7 @@ Print the help
 Report bugs to <tubear.chen@packetx.biz>.
 ```
 
-Example 1 啟動`Enlighten`
+Example 1 Start `Enlighten`
 -----------
 
 ```
@@ -81,9 +81,9 @@ $ sudo control start
 control: 'enlighten' is running
 ```
 
-啟動必須使用root權限。
+Root privileges is needed.
 
-Example 2 馬上停止`Enlighten`
+Example 2 Stop `Enlighten`
 -----------
 
 ```
@@ -95,9 +95,9 @@ $ sudo control stop
 control: 'enlighten' is not running
 ```
 
-馬上停止必須使用root權限。
+Root privileges is needed.
 
-Example 3 停止`Enlighten`
+Example 3 Quit `Enlighten`
 -------------
 
 ```
@@ -109,9 +109,9 @@ $ sudo control quit
 control: 'enlighten' is not running
 ```
 
-停止必須使用root權限。
+Root privileges is needed.
 
-Example 4 重新啟動`Enlighten`
+Example 4 Restart `Enlighten`
 -------------
 
 ```
@@ -121,50 +121,50 @@ control: 'enlighten' is stopped
 'enlighten' is starting...
 ```
 
-重新啟動停止必須使用root權限；效果等同於：
+Root privileges is needed. Command is same as:
 
 ```
 $ sudo control stop
 $ sudo control start
 ```
 
-Example 5 強迫停止`Enlighten`
+Example 5 Force stop `Enlighten`
 ------------
 
 ```
 $ sudo control kill
 ```
 
-強迫停止必須使用root權限。
+Root privileges is needed.
 
-Example 6 要求log輪替
+Example 6 Log rotation
 ------------
 
 ```
 $ sudo control rotate-log
 ```
 
-要求log輪替必須使用root權限。
+Root privileges is needed.
 
-Example 7 重新讀取設定檔
+Example 7 Reload
 ------------
 
 ```
 $ sudo control reload
 ```
 
-重新讀取設定檔必須使用root權限；重新讀取只能重讀部分內容。
+Root privileges is needed.
 
-Example 8 優雅關閉`Enlighten`
+Example 8 Graceful shutdown `Enlighten`
 ------------
 
 ```
 $ sudo control graceful-quit
 ```
 
-優雅關閉必須使用root權限；會等待全部連線結束後再退出。
+Root privileges is needed.
 
-Example 9 啟動`www`
+Example 9 Start `www`
 -----------
 
 ```
@@ -175,9 +175,9 @@ $ sudo control start-www
 control: 'www' is running
 ```
 
-啟動必須使用root權限。
+Root privileges is needed.
 
-Example 10 停止`www`
+Example 10 Stop `www`
 -----------
 
 ```
@@ -189,9 +189,9 @@ $ sudo control stop-www
 control: 'www' is not running
 ```
 
-停止必須使用root權限。
+Root privileges is needed.
 
-Example 11 重新啟動`www`
+Example 11 Restart `www`
 -------------
 
 ```
@@ -201,23 +201,23 @@ control: 'www' is stopped
 'www' is starting...
 ```
 
-重新啟動停止必須使用root權限；效果等同於：
+Root privileges is needed. Command is same as:
 
 ```
 $ sudo control stop-www
 $ sudo control start-www
 ```
 
-Example 12 強迫停止`www`
+Example 12 Force stop `www`
 ------------
 
 ```
 $ sudo control kill-www
 ```
 
-強迫停止必須使用root權限。
+Root privileges is needed.
 
-Example 13 列出程序資訊
+Example 13 List processes information
 ------------
 
 ```
@@ -234,4 +234,4 @@ $ sudo control proc-list
  Listening      17358      pktx1:8443     Worker          1
 ```
 
-列出程序資訊必須使用root權限。
+Root privileges is needed.

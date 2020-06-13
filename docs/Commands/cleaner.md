@@ -1,7 +1,7 @@
 cleaner
 ============
 
-清除一些過期的資訊。
+Clean something expired.
 
 Help
 -------------
@@ -28,7 +28,7 @@ Print the help
 Report bugs to <tubear.chen@packetx.biz>.
 ```
 
-Example 1 清除過期憑證
+Example 1 Clean expired certificate
 ------------
 
 ```
@@ -36,9 +36,9 @@ $ sudo cleaner certificate --path /usr/local/Enlighten/var/cache/forged-cert/pkt
 17 certificate is removed
 ```
 
-清除過期憑證必須使用root權限。
+Root privileges is needed.
 
-Example 2 清除過期連線資訊
+Example 2 Clean expired tracking table entry
 -----------
 
 ```
@@ -46,16 +46,16 @@ $ sudo cleaner tracking --name ST1
 42 entry is removed
 ```
 
-清除過期連線資訊必須使用root權限。
+Root privileges is needed.
 
-Example 3 刪除所有`Enlighten`產生的共享記憶體
+Example 3 Clear all named shared memory that belong to `Enlighten`
 -----------
 
 ```
 $ sudo cleaner shm
 ```
 
-刪除所有`Enlighten`產生的共享記憶體必須使用root權限；效果等同於：
+Root privileges is needed. Command is same as:
 
 ```
 $ sudo shm clear

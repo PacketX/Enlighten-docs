@@ -1,7 +1,7 @@
 shm
 ==============
 
-管理由`Enlighten`產生的有名共享記憶體。
+Manipulate named shared memory which mounted under `/dev/shm`.
 
 Help
 ---------
@@ -27,7 +27,7 @@ Print the help
 Report bugs to <tubear.chen@packetx.biz>.
 ```
 
-Example 1 列出全部共享記憶體資訊
+Example 1 List all named shared memory
 ---------------
 
 ```
@@ -40,7 +40,7 @@ $ shm list
               Core-Shared     64.00B        yes    10479
 ```
 
-Example 2 刪除共享記憶體
+Example 2 Destroy named shared memory
 -------------
 
 ```
@@ -50,9 +50,9 @@ shm: destroying 'ST2-Port' was permission denied
 $ sudo shm destroy --name ST2-Port
 ```
 
-必須使用root權限才能操作刪除。
+Root privileges is needed.
 
-Example 3 刪除所有`Enlighten`產生的共享記憶體
+Example 3 Clear all named shared memory that belong to `Enlighten`
 ------------
 
 ```

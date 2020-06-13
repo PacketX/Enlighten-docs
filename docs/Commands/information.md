@@ -1,7 +1,7 @@
 information
 ==============
 
-`Enlighten`的組態、參數，第三方相依性資訊。
+Anything information about `Enlighten`.
 
 Help
 -----------
@@ -34,7 +34,7 @@ Print the help
 Report bugs to <tubear.chen@packetx.biz>.
 ```
 
-Example 1 輸出全部資訊
+Example 1 Information
 -------------
 
 ```
@@ -222,7 +222,7 @@ ThirdPartyLibrary:
         LIBS: -lpcap
 ```
 
-Example 2 輸出特定資訊
+Example 2 Specify information
 -------------
 
 ```

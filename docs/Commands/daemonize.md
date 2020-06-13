@@ -1,7 +1,7 @@
-daemonlize
+daemonize
 =============
 
-將指令以daemon方式執行，指令會搜尋環境變數`$PATH`下的路徑，也可以傳入絕對路徑。
+Make process daemonize. Command will be found in `$PATH` or in absolute path.
 
 Help
 ---------

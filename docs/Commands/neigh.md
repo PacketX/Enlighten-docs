@@ -1,7 +1,7 @@
 neigh
 ===========
 
-管理`Enlighten`內部的ARP及NDP表。
+Manipulate the Enlighten ARP and NDP cache.
 
 Help
 -----------
@@ -33,7 +33,7 @@ Print the help
 Report bugs to <tubear.chen@packetx.biz>.
 ```
 
-Example 1 增加一筆ARP項目並列出
+Example 1 Add an ARP entry and list
 -----------
 
 ```
@@ -44,7 +44,7 @@ $ neigh arp --list
           pktx2     192.168.1.2 02:00:00:00:00:00
 ```
 
-Example 2 刪除一筆ARP項目
+Example 2 Delete an ARP entry
 -----------
 
 ```
@@ -54,7 +54,7 @@ $ neigh arp --delete 192.168.1.99@pktx2
 neigh: '192.168.1.99@pktx2' is not found
 ```
 
-Example 3 清空ARP表
+Example 3 Clear ARP table
 -----------
 
 ```
@@ -75,9 +75,7 @@ $ neigh arp --clear *@*
 3 entries are removed
 ```
 
-第一種是根據介面清空；第二種是根據IP地址清空；第三種是完全清空。
-
-Example 4 將ARP表從共享記憶體中刪除
+Example 4 Destroy ARP table
 -----------
 
 ```
@@ -85,15 +83,15 @@ $ sudo neigh arp --destroy
 neigh: warning: it will cause process(10693) segmentation fault that used
 ```
 
-該指定等同於：
+Command is same as:
 
 ```
 $ sudo shm destroy --name ARP-Table
 ```
 
-該操作會造成用該記憶體的程式損毀。
+**Don't do this.**
 
-Example 5 增加一筆NDP項目並列出
+Example 5 Add a NDP entry and list
 -----------
 
 ```
@@ -104,7 +102,7 @@ $ neigh ndp --list
           pktx2                                       fe80::1 02:00:00:00:00:00
 ```
 
-Example 6 刪除一筆NDP項目
+Example 6 Delete a NDP entry
 -----------
 
 ```
@@ -114,7 +112,7 @@ $ neigh ndp --delete fe80::99@pktx2
 neigh: 'fe80::99@pktx2' is not found
 ```
 
-Example 7 清空NDP表
+Example 7 Clear NDP table
 -----------
 
 ```
@@ -135,9 +133,7 @@ $ neigh ndp --clear *@*
 3 entries are removed
 ```
 
-第一種是根據介面清空；第二種是根據IP地址清空；第三種是完全清空。
-
-Example 8 將NDP表從共享記憶體中刪除
+Example 8 Destroy NDP table
 -----------
 
 ```
@@ -145,10 +141,10 @@ $ sudo neigh ndp --destroy
 neigh: warning: it will cause process(10693) segmentation fault that used
 ```
 
-該指定等同於：
+Command is same as:
 
 ```
 $ sudo shm destroy --name NDP-Table
 ```
 
-該操作會造成用該記憶體的程式損毀。
+**Don't do this.**

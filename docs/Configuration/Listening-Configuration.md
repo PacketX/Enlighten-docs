@@ -1,7 +1,7 @@
 Listening Configuration
 ==========
 
-`Listening`第一個參數`IPS`會改變整個執行方式，有些參數也不同（會標記）。
+THE FIRST OPTION `IPS` CHANGE WHOLE THINGS.
 
 Configuration
 ----------
@@ -80,7 +80,7 @@ Configuration
 
 <h3 id="ssl_session_cache">Session Cache</h3>
 
-支援三種輸入方式，`off`、`none`以及輸入數字，數字的話必須大於0。
+Accept: `off`, `none` or numbers, number must be greater than zero.
 
 <h3 id="network_simulator">Network Simulator</h3>
 

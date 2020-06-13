@@ -1,7 +1,7 @@
 upelt
 ===========
 
-更新`Enlighten`工具。
+Upgrade `Enlighten` system.
 
 Help
 ---------
@@ -24,7 +24,7 @@ Print the help
 Report bugs to <tubear.chen@packetx.biz>.
 ```
 
-Example 1 更新`Enlighten`（失敗）
+Example 1 Upgrade `Enlighten`(Failed)
 ---------------
 
 ```
@@ -38,9 +38,9 @@ upelt: the build timestamp of newer package is older than current package, incre
 upelt: cleaning up...
 ```
 
-更新必須使用root權限。
+Root privileges is needed.
 
-Example 2 強迫更新`Enlighten`（成功）
+Example 2 Force upgrade `Enlighten`(Success)
 -------------
 
 ```
@@ -65,9 +65,9 @@ upelt: upgrade is done!
 upelt: cleaning up...
 ```
 
-更新必須使用root權限，`--force`選項後的數字是可以接受幾次警告。
+Root privileges is needed, `--force` option is acceptable warning counter.
 
-Example 3 複寫更新`Enlighten`（成功）
+Example 3 Override upgrade `Enlighten`(Success)
 ----------
 
 ```
@@ -80,4 +80,4 @@ upelt: upgrade is done!
 upelt: cleaning up...
 ```
 
-複寫更新必須帶選項`--force`。
+Override upgrade is must to append `--force` option.

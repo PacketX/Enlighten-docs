@@ -1,7 +1,7 @@
 config
 =============
 
-產生預設設定檔。
+Generate default configuration.
 
 Help
 ----------
@@ -63,7 +63,7 @@ Print the help
 Report bugs to <tubear.chen@packetx.biz>.
 ```
 
-Example 1 產生`Listening`TCP forward預設設定檔
+Example 1 `Listening` TCP forward
 ----------
 
 ```
@@ -142,7 +142,7 @@ $ config listening-tcp-forward
  }
 ```
 
-Example 2 產生`Kerctl`預設設定檔並存檔
+Example 2 `Kerctl` defaults and save
 ------------
 
 ```

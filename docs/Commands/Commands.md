@@ -6,67 +6,67 @@ Core
 
 <h3>enlighten</h3>
 
-`Enlighten`核心，管理`Nethook`以及`Listening`。
+`Enlighten` core to execute `Nethook` and `Listening`.
 
 <h3>nethook</h3>
 
-負責處理原始(raw)封包接收、修改和發送。
+Raw packet handler.
 
 <h3>listening</h3>
 
-負責處理Socket Server程式。
+Main Listening event loop.
 
 <h3>www</h3>
 
-`Enlighten`網頁伺服器，提供網頁資源和Restful API。
+Web interface and restful API.
 
 Aid
 --------------
 
-<h3>daemonlize</h3>
+<h3>daemonize</h3>
 
-將程式以`daemon`方式執行；需以絕對路徑傳入。
+Make process daemonize.
 
 <h3>shm</h3>
 
-管理以`shm_open()`所產生的共享記憶體。
+Manipulate named shared memory which mounted under `/dev/shm`.
 
 <h3>neigh</h3>
 
-管理共享記憶體內的ARP和NDP Table。
+Manipulate the Enlighten ARP and NDP cache.
 
 <h3>intf</h3>
 
-取得可用的介面資訊，根據`./configure`階段傳入的`--with-platform`決定。
+List available network interface infromation.
 
 <h3>tracking</h3>
 
-管理共享記憶體內的`Tracking Table`。
+Manipulate the Enlighten connection tracking table.
 
 <h3>information</h3>
 
-資源資訊。
+Anything information about Enlighten.
 
 <h3>control</h3>
 
-訊號控制`Enlighten`的工具。
+Control the Enlighten and www.
 
 <h3>cleaner</h3>
 
-清除過期資訊。
+Clean something expired.
 
 <h3>config</h3>
 
-產生`Enlighten`、`Nethook`、`Listening`和`Kerctl`預設config。
+Generate default configuration.
 
 <h3>kerctl</h3>
 
-`sysctl`同名指令。
+Configure kernel parameters at runtime.
 
 <h3>cryptvrfy</h3>
 
-驗證或取得`OpenSSL`相關可用參數。
+Verify SSL and cryptography related parameters.
 
 <h3>upelt</h3>
 
-更新`Enlighten`輔助工具。
+Upgrade Enlighten system.

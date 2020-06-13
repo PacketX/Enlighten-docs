@@ -1,7 +1,7 @@
 tracking
 ===========
 
-`Enlighten`連線資訊表。
+Manipulate the `Enlighten` connection tracking table.
 
 Help
 ------------
@@ -21,7 +21,7 @@ Print the help
 Report bugs to <tubear.chen@packetx.biz>.
 ```
 
-Example 1 列出連線資訊表內容
+Example 1 List tracking table entry
 ------------
 
 ```

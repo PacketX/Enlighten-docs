@@ -1,7 +1,7 @@
 listening
 ==============
 
-Socket處理程式，負責所有資料轉送、建立以及處理。
+Listening, socket proxy.
 
 Help
 -----------
@@ -22,16 +22,16 @@ Print the help
 Report bugs to <tubear.chen@packetx.biz>.
 ```
 
-Example 1 指定設定檔執行
+Example 1 Run with configuration file
 -------------
 
 ```
 $ sudo listening core --configure /usr/local/Enlighten/etc/listening/ls_3128.json
 ```
 
-`listening`必須使用root權限。
+Root privileges is needed.
 
-Example 2 檢查設定檔是否錯誤
+Example 2 Check configuration content
 -------------
 
 ```
@@ -45,9 +45,9 @@ $ echo $?
 1
 ```
 
-執行完後檢查回傳值：`echo $?`，`0`為正確，`1`為錯誤。
+`echo $?`, `0` is ok and `1` is error.
 
 Configuration
 -------------
 
-See [Listening Configuration](Configuration/Listening-Configuration.md)。
+See [Listening Configuration](Configuration/Listening-Configuration.md).

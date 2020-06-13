@@ -1,7 +1,7 @@
 enlighten
 ==============
 
-`Enlighten`核心程式；並不會背景執行，需要使用`daemonlize`或`control`。
+`Enlighten`, proxy anything.
 
 Help
 -----------
@@ -22,25 +22,25 @@ Print the help
 Report bugs to <tubear.chen@packetx.biz>.
 ```
 
-Example 1 指定設定檔執行
+Example 1 Run with configuration file
 -------------
 
 ```
 $ sudo enlighten core --configure /usr/local/Enlighten/etc/enlighten/enlighten.json
 ```
 
-`enlighten`必須使用root權限。
+Root privileges is needed.
 
-Example 2 使用預設設定檔執行
+Example 2 Run with default configuration file
 -------------
 
 ```
 $ sudo enlighten core
 ```
 
-預設設定檔位置為：`${prefix}/etc/enlighten`；如果`./configure`時指定`--prefix=/usr/local/Enlighten`的話，那預設檔案為：`/usr/local/Enlighten/etc/enlighten/enlighten.json`。
+Default: `${prefix}/etc/enlighten/enlighten.json`.
 
-Example 3 檢查設定檔是否錯誤
+Example 3 Check configuration content
 -------------
 
 ```
@@ -59,9 +59,11 @@ $ echo $?
 1
 ```
 
-執行完後檢查回傳值：`echo $?`，`0`為正確，`1`為錯誤；`'BindNethook' interface 'pktx2' may not exist, but still working`訊息為：因`listening`執行需要搭配`nethook`，所以只能預設猜測`listening`設定中對應的`nethook`設定是存在的。
+`echo $?`, `0` is ok and `1` is error.
+
+Message: "`'BindNethook' interface 'pktx2' may not exist, but still working`" is still ok.
 
 Configuration
 -------------
 
-See [Enlighten Configuration](Configuration/Enlighten-Configuration.md)。
+See [Enlighten Configuration](Configuration/Enlighten-Configuration.md).

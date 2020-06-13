@@ -1,7 +1,7 @@
 intf
 =========
 
-網路卡介面管理，以`Enlighten`可用介面為主。
+Network interface information for Enlighten.
 
 Help
 -----------
@@ -32,7 +32,7 @@ Print the help
 Report bugs to <tubear.chen@packetx.biz>.
 ```
 
-Example 1 列出`Enlighten`可用的網路卡資訊
+Example 1 List available network interface infromation
 ----------
 
 ```
@@ -76,7 +76,7 @@ MTU: 1500
 ...
 ```
 
-Example 2 列出特定網路卡資訊
+Example 2 List specify interface information
 -----------
 
 ```
@@ -138,9 +138,9 @@ $ intf list --interface P6 --json
  }
 ```
 
-可接受別名。
+Alias name is acceptable.
 
-Example 3 列出tun/tap虛擬網路卡資訊
+Example 3 List TUN/TAP interface information
 -----------
 
 ```
@@ -181,7 +181,7 @@ $ intf tap --interface pktx1 --json
  }
 ```
 
-Example 4 取回網路卡系統統計資訊
+Example 4 Retrieve network interface statistics
 -----------
 
 ```

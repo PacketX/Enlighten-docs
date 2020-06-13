@@ -1,7 +1,7 @@
 cryptvrfy
 ===========
 
-檢查`OpenSSL`相關參數是否合法。
+Verify SSL and cryptography related parameters.
 
 Help
 ---------
@@ -30,7 +30,7 @@ Print the help
 Report bugs to <tubear.chen@packetx.biz>.
 ```
 
-Example 1 驗證橢圓曲線
+Example 1 Verify curve list
 -----------
 
 ```
@@ -47,9 +47,9 @@ $ echo $?
 2
 ```
 
-執行完後檢查回傳值：`echo $?`，`0`為正確，`2`為錯誤。
+`echo $?`, `0` is ok and `2` is error.
 
-Example 2 驗證SSL密碼套件
+Example 2 Verify SSL ciphers
 -------------
 
 ```
@@ -62,9 +62,9 @@ $ echo $?
 2
 ```
 
-執行完後檢查回傳值：`echo $?`，`0`為正確，`2`為錯誤。
+`echo $?`, `0` is ok and `2` is error.
 
-Example 3 驗證SSL版本
+Example 3 Verify SSL version
 -----------
 
 ```
@@ -77,4 +77,4 @@ $ echo $?
 2
 ```
 
-執行完後檢查回傳值：`echo $?`，`0`為正確，`2`為錯誤。
+`echo $?`, `0` is ok and `2` is error.

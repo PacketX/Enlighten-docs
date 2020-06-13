@@ -10,7 +10,7 @@
 		* [nethook](Commands/nethook.md)
 		* [listening](Commands/listening.md)
 	* Aid 
-		* [daemonlize](Commands/daemonlize.md)
+		* [daemonize](Commands/daemonize.md)
 		* [shm](Commands/shm.md)
 		* [neigh](Commands/neigh.md)
 		* [intf](Commands/intf.md)

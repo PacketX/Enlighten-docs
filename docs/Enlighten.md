@@ -4,33 +4,35 @@ Enlighten
 Features
 ------------
 
-* `ARP`, `NDP` Cache and Responser。
-* `4-Tuple`和`Domain`之黑名單、白名單。
-* 動態檢測所有Port是否為`SSL/TLS`連線並可阻斷或通知非`SSL/TLS`連線。
-* `SSL/TLS` Engine。
-* `SSL/TLS` [Cipher Suite](https://www.openssl.org/docs/man1.1.1/man1/ciphers.html)列表。
-* `SSL/TLS` 版本控制，`SSLv2(Deprecated)`、`SSLv3`、`TLSv1.0`、`TLSv1.1`、`TLSv1.2`、`TLSv1.3`。
-* `IPv4/IPv6`。
-* [Network Simulator](#ns)。
-* [Syslog](#syslog)。
-* [`JA3`](https://engineering.salesforce.com/tls-fingerprinting-with-ja3-and-ja3s-247362855967)、[`JA3S`](https://engineering.salesforce.com/tls-fingerprinting-with-ja3-and-ja3s-247362855967)。
-* `TLSv1.3` Early Data(0-RTT)。
-*  頻寬控制。
-* [`ALPN`](https://en.wikipedia.org/wiki/Application-Layer_Protocol_Negotiation)。
-* DH Param。
-* `SSL/TLS` Session Cache。
-* `SSL/TLS` Session Ticket。
-* `SSL/TLS` Session Reuse。
-* 時間準確度誤差允許值。
-* Perfect Forward Secrecy。
-* Secure Renegotiation。
-* Downgrade Attack Prevention。
-* [統計資訊](#statistics)。
+* `ALPN`.
+* `ARP`, `NDP` Cache and Responser.
+* `DH Param`.
+* `Downgrade Attack Prevention`.
+* `Graceful Shutdown TCP Connections`.
+* `IPv4/IPv6`.
+* `JA3`, `JA3S`.
+* `Log Rotation`.
+* `Perfect Forward Secrecy`.
+* `Secure Renegotiation`.
+* `SSL/TLS` Cipher Suite.
+* `SSL/TLS` Engine.
+* `SSL/TLS` Session Cache.
+* `SSL/TLS` Session Reuse.
+* `SSL/TLS` Session Ticket.
+* `SSL/TLS` Supported Groups.
+* `SSL/TLS` Versions: `SSLv2(Deprecated)`, `SSLv3`, `TLSv1.0`, `TLSv1.1`, `TLSv1.2` and `TLSv1.3`.
+* `TLSv1.3` Early Data(0-RTT).
+* Bandwidth Control.
+* Block/Allow List of `4-Tuple` and `Domain`.
+* Dynamic `SSL/TLS` Connections Detection.
+* Network Simulator.
+* Statistics.
+* Syslog.
+* TCP/IP Stack Adjustment.
+* Timer resolution.
 
-Proxy
+Proxy mode
 -------------
-
-支援五種代理方式:
 
 1. `TCP to TCP`(Plain-Text forward)
 2. `SSL/TLS to SSL/TLS`(Cipher-Text forward)
@@ -41,7 +43,7 @@ Proxy
 Dynamic Generating Forged Certificates
 -------------
 
-* Proxy mode為`SSL/TLS to SSL/TLS`時，會根據Server憑證資訊動態簽出一個憑證給Client。
+* Proxy mode is `SSL/TLS to SSL/TLS` or `SSL/TLS to TCP - TCP to SSL/TLS`, auto sign a certificate for client, according to server gave certificate information.
 
 Key Exchange(Base on OpenSSL Built)
 -------------
@@ -59,7 +61,7 @@ Supported Named Groups(Base on OpenSSL Built)
 4. `P-384`
 5. `P-521`
 
-Symmetric Key(Base on OpenSSL Builds)
+Symmetric Key(Base on OpenSSL Built)
 -------------
 
 1. `RC4`
@@ -71,7 +73,7 @@ Symmetric Key(Base on OpenSSL Builds)
 7. `SEED`
 
 
-Cryptographic Message Authentication Code(Base on OpenSSL Builds)
+Cryptographic Message Authentication Code(Base on OpenSSL Built)
 -------------
 
 1. `MD5`
@@ -79,7 +81,7 @@ Cryptographic Message Authentication Code(Base on OpenSSL Builds)
 3. `SHA384`
 4. `Poly1305`
 
-Digital Signature Algorithm(Base on OpenSSL Builds)
+Digital Signature Algorithm(Base on OpenSSL Built)
 -------------
 
 1. `RSA`
@@ -106,7 +108,7 @@ SSL/TLS Extensions
 1. `Application-Layer Protocol Negotiation(ALPN)`
 2. `Server Name Indication(SNI)`
 
-SSL/TLS Versions(Base on OpenSSL Builds)
+SSL/TLS Versions(Base on OpenSSL Built)
 -------------
 
 1. `SSLv2(Deprecated)`
@@ -116,7 +118,8 @@ SSL/TLS Versions(Base on OpenSSL Builds)
 5. `TLSv1.2`
 6. `TLSv1.3`
 
-<h2 id="statistics">Statistics</h2>
+Statistics
+-------------
 
 1. `Decryption side accepting downstream`
 2. `Decryption side accepted downstream`
@@ -216,38 +219,40 @@ SSL/TLS Versions(Base on OpenSSL Builds)
 82. `Downstream SSL cipher`
 83. `Upstream SSL cipher`
 
-<h2 id="ns">Network Simulator</h2>
+Network Simulator
+------------------
 
-1. 網路模擬功能會將解密的資料再以封包方式拋出，讓外部的IDS設備接收分析。
-2. 可儲存成`.pcap`封包檔案。
-3. 可將原始資料儲存成檔案。
-4. 可根據`5-tuple`、`Domain`以及`Certificate fingerprint`(`sha256`)來禁止模擬送出或儲存。
+1. Simulating decrypted data transmission as raw packet, IDS can do analyzation.
+2. Save as `.pcap` format.
+3. Save as raw content.
+4. Disable simulation according to `5-tuple`, `Domain` and `Certificate fingerprint`(in `sha256`).
 
-<h2 id="syslog">Syslog</h2>
+Syslog
+-------------------
 
-1. `Syslog`採用[`RFC 5424`](https://tools.ietf.org/html/rfc5424)。
-2.  大致格式為: `<priority(Facility + Level)>VERSION TIMESTAMP(ISO-8601) HOSTNAME APP-NAME PROCID MSGID STRUCTURED-DATA MSG`。
-3. `Facility`為`Local0`。
-4. 目前`VERSION`為1。
-5. 時戳格式為: [`ISO-8601`](https://www.iso.org/iso-8601-date-and-time-format.html)，`2020-03-03T02:02:02.000012Z`。
-6. `HOSTNAME`若沒設定，為`-`。
-7. `APP-NAME`目前有`listening`。
-8. `PROCID`為`-`。
-9. `STRUCTURED-DATA`為`-`。
-10. `MSG`採`UTF-8`編碼，所以開頭會帶有[`BOM`](https://tools.ietf.org/html/rfc5424#page-37)(0xEF 0xBB 0xBF)。
-11. `Source port`為`514`。
+1. `Syslog` take [`RFC 5424`](https://tools.ietf.org/html/rfc5424) format.
+2.  Format: `<priority(Facility + Level)>VERSION TIMESTAMP(ISO-8601) HOSTNAME APP-NAME PROCID MSGID STRUCTURED-DATA MSG`.
+3. `Facility` is always `Local0`.
+4. `VERSION` is 1.
+5. Timestamp: [`ISO-8601`](https://www.iso.org/iso-8601-date-and-time-format.html)，`2020-03-03T02:02:02.000012Z`.
+6. `HOSTNAME` if not used, setted to `-`.
+7. `APP-NAME` current: `listening`.
+8. `PROCID` is always `-`.
+9. `STRUCTURED-DATA` is always `-`.
+10. `MSG` is using `UTF-8` encoding, message start with a [`BOM`](https://tools.ietf.org/html/rfc5424#page-37)(0xEF 0xBB 0xBF).
+11. `Source port` is `514`.
 
 <h3>Listening Syslog</h3>
 
-* `%Z`: 時戳。
-* `%P`: `[IPv4/IPv6地址]:Port`。
-* `%S`: `SNI`，可能為空字串。
-* `%J`: `JA3`字串。
-* `%e`: 錯誤訊息或原因，可能為空字串。
-* `%dr`: `Listening`從Downstream端讀取的bytes數。
-* `%ds`: `Listening`送往Downstream端的bytes數。
-* `%ur`: `Listening`從Upstream端讀取的bytes數。
-* `%us`: `Listening`送往Upstream端的bytes數。
+* `%Z`: Timestamp.
+* `%P`: `[IPv4/IPv6 address]:Port`.
+* `%S`: `SNI`, may a empty string.
+* `%J`: `JA3` string.
+* `%e`: error message or reason, may a empty string.
+* `%dr`: `Listening` received bytes from Downstream.
+* `%ds`: `Listening` sent bytes to Downstream.
+* `%ur`: `Listening` received bytes from Upstream.
+* `%us`: `Listening` sent bytes to Upstream.
 
 <h4>Accepting Downstream(MSGID: 1)</h4>
 
@@ -371,7 +376,7 @@ SSL/TLS Versions(Base on OpenSSL Builds)
 
 <h4>SSL Upstream Certifiacte All in One(MSGID: 25)</h4>
 
-憑證相關資訊只用一條訊息送出，`disabled`的項目用`-`或`0`代替。
+Certificate information combine into one message, the disabled item is show as `-` or `0`.
 
 * `<134>1 %Z - enlighten - 25 - BOM%P and %P SSL upstream SNI '%s' certificate '%d/%d' serial number: '%s', signature algorithm: '%s', not before: '%s'(%s), not after: '%s'(%s), issuer: '%s', subject: '%s', public key: '%s', '%u' bits, key usage: '%s', extension key usage: '%s', extension SAN, DNS: '%s', IPv4: '%s', IPv6: '%s', fingerprint(SHA1): '%s', fingerprint(SHA256): '%s'`
 * `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 25 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 SSL SNI 'www.example.com' certificate '1/3' serial number: '47:e2:00:00:00:01:25:67:38:1f:16:b7:03:09:bb:0d', signature algorithm: 'sha256WithRSAEncryption', not before: 'Apr 17 10:41:32 2018 GMT'(Valid), not after: 'Apr 17 15:59:59 2020 GMT'(Not expired), issuer: '/C=TW/O=TAIWAN-CA/OU=Secure SSL Sub-CA/CN=TWCA Secure SSL Certification Authority', subject: '/C=TW/ST=Taiwan/L=Kaohsiung/O=National Kaohsiung University of Hospitality and Tourism/OU=edu/CN=*.nkuht.edu.tw', public key: 'RSA', '2048' bits, key usage: 'Digital Signature, Key Encipherment', extension key usage: 'TLS Web Server Authentication, TLS Web Client Authentication', extension SAN, DNS: '*.nkuht.edu.tw', IPv4: '', IPv6: '', fingerprint(SHA1): '20:95:ef:9b:6b:be:28:4a:eb:d3:06:27:7a:d9:6e:5058:3e:6a:40', fingerprint(SHA256): '8e:7c:d0:27:7d:0f:2a:1c:2e:93:45:5c:6f:19:08:69df:64:8b:19:ee:5f:77:4c:7d:d8:cb:cc:65:83:15:73'`

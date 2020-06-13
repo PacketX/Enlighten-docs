@@ -1,7 +1,7 @@
 kerctl
 =============
 
-`sysctl`設定。
+Configure `kernel` parameters at runtime.
 
 Help
 --------
@@ -9,7 +9,7 @@ Help
 ```
 $ kerctl
 Usage: kerctl [GROUP] [OPTION...]
-Kerctl, configure kernel parameters at runtime
+Configure kernel parameters at runtime
 
 Set kernel state
     core
@@ -22,25 +22,25 @@ Print the help
 Report bugs to <tubear.chen@packetx.biz>.
 ```
 
-Example 1 指定設定檔執行
+Example 1 Run with configuration file
 -------------
 
 ```
 $ sudo kerctl core --configure /usr/local/Enlighten/etc/kerctl/kerctl.json
 ```
 
-`kerctl`必須使用root權限。
+Root privileges is needed.
 
-Example 2 使用預設設定檔執行
+Example 2 Run with default configuration file
 -------------
 
 ```
 $ sudo kerctl core
 ```
 
-預設設定檔位置為：`${prefix}/etc/kerctl`；如果`./configure`時指定`--prefix=/usr/local/Enlighten`的話，那預設檔案為：`/usr/local/Enlighten/etc/kerctl/kerctl.json`。
+Default: `${prefix}/etc/kerctl/kerctl.json`.
 
-Example 3 檢查設定檔是否錯誤
+Example 3 Check configuration content
 -------------
 
 ```
@@ -53,9 +53,9 @@ $ echo $?
 1
 ```
 
-執行完後檢查回傳值：`echo $?`，`0`為正確，`1`為錯誤。
+`echo $?`, `0` is ok and `1` is error.
 
 Configuration
 -------------
 
-See [kerctl Configuration](../Configuration/kerctl-Configuration.md)。
+See [kerctl Configuration](../Configuration/kerctl-Configuration.md).

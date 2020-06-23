@@ -16,6 +16,7 @@ Requiring specific information
         --prefix,         -p    Append prefix
         --bug,            -m    Bug report address
         --timestamp,      -t    Timestamp of build-time
+        --pkg-version,    -v    Package version
         --libelt,         -l    Enlighten library version
         --sys-types,      -s    System types
         --compiler,       -C    C and Go compiler
@@ -41,20 +42,21 @@ Example 1 Information
 $ information core
 Prefix: /usr/local/Enlighten
 BugReportAddress: tubear.chen@packetx.biz
-BuildTimestamp: 2020-05-22T08:29:03+0800
-LibraryVersion: 1.1.2-stable
+BuildTimestamp: 2020-06-24T00:14:53+0800
+PackageVersion: 0.0.0
+LibraryVersion: 1.1.12-stable
 SystemTypes:
     Endianness: Little Endian
     Machine: x86_64
     CacheLine: 64
     Platform: POC
 Compiler:
-    CPreprocessor: gcc -E
-    CCompiler: gcc
-    CCFLAGS: -ggdb -g3 -O2 -finline-functions
+    CPreprocessor: ccache gcc -E
+    CCompiler: ccache gcc
+    CCFLAGS: -ggdb -g2 -O2 -finline-functions
     CLDFLAGS: -Wl,-R/usr/local/lib -Wl,-R/usr/local/ssl/lib
     CLIBS: 
-    CWarningCFLAGS: -Wall -Werror=switch -Werror=nonnull -Werror=unused-result 
+    CWarningCFLAGS: -Wall -Wno-sign-compare -Wno-type-limits -Wno-missing-field-initializers -Wno-unused-parameter -Werror=switch -Werror=nonnull -Werror=unused-result
     CExtraCFLAGS: -static -std=gnu11 
     CExtraLDFLAGS: -static -Wl,--whole-archive,$(top_srcdir)/lib/.libs/libelt.a,--no-whole-archive 
     CExtraLIBS: -lm -lpthread -lrt -ldl -lgcc_s 
@@ -64,7 +66,7 @@ Compiler:
     GoArch: amd64
 Git:
     Branch: develop
-    LatestHash: 7c0337e46a7062a91505f14ead37bf83ebc36821
+    LatestHash: a1501b85c00001cfc6c11951c3d3a1bafbbf6cbc
 Defaults:
     EnlightenConfigurationFilename: /usr/local/Enlighten/etc/enlighten/enlighten.json
     EnlightenConfigurationFilenameFound: true
@@ -80,19 +82,19 @@ Commands:
     enlighten:
         FullPath: /usr/local/Enlighten/sbin/enlighten
         Found: true
-        Version: 1.0.1-alpha
+        Version: 1.0.5-stable
     nethook:
         FullPath: /usr/local/Enlighten/libexec/nethook
         Found: true
-        Version: 1.0.12-alpha
+        Version: 1.0.15-stable
     listening:
         FullPath: /usr/local/Enlighten/libexec/listening
         Found: true
-        Version: 1.0.22-alpha
+        Version: 1.0.27-stable
     www:
         FullPath: /usr/local/Enlighten/sbin/www
         Found: true
-        Version: 0.0.1-dev
+        Version: 1.0.1-stable
     neigh:
         FullPath: /usr/local/Enlighten/libexec/neigh
         Found: true
@@ -118,34 +120,32 @@ Commands:
         Found: true
         Version: 1.0.0-stable
     control:
-        FullPath: /usr/local/Enlighten/libexec/control
+        FullPath: /usr/local/Enlighten/sbin/control
         Found: true
-        Version: 1.0.6-stable
+        Version: 1.0.8-stable
     information:
-        FullPath: /usr/local/Enlighten/libexec/information
+        FullPath: /usr/local/Enlighten/bin/information
         Found: true
-        Version: 1.1.0-stable
+        Version: 1.1.1-stable
     config:
-        FullPath: /usr/local/Enlighten/libexec/config
+        FullPath: /usr/local/Enlighten/bin/config
         Found: true
-        Version: 1.0.4-stable
+        Version: 1.0.5-stable
     kerctl:
         FullPath: /usr/local/Enlighten/libexec/kerctl
         Found: true
-        Version: 1.0.0-stable
+        Version: 1.0.2-stable
     cryptvrfy:
         FullPath: /usr/local/Enlighten/libexec/cryptvrfy
         Found: true
         Version: 1.0.0-stable
-SystemCommands:
-    sh:
-        FullPath: /bin/sh
+    upelt:
+        FullPath: /usr/local/Enlighten/sbin/upelt
         Found: true
+        Version: 1.0.2-stable
+SystemCommands:
     ip:
         FullPath: /sbin/ip
-        Found: true
-    ethtool:
-        FullPath: /sbin/ethtool
         Found: true
     route:
         FullPath: /sbin/route
@@ -162,14 +162,11 @@ SystemCommands:
     cp:
         FullPath: /bin/cp
         Found: true
-    mv:
-        FullPath: /bin/mv
-        Found: true
     rm:
         FullPath: /bin/rm
         Found: true
-    sleep:
-        FullPath: /bin/sleep
+    chown:
+        FullPath: /bin/chown
         Found: true
 Extensions:
     jemalloc: true

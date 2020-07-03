@@ -64,22 +64,23 @@ Supported Named Groups(Base on OpenSSL Built)
 Symmetric Key(Base on OpenSSL Built)
 -------------
 
-1. `RC4`
-2. `3DES`
-3. `AES-CBC`
-4. `AES-GCM`
-5. `ChaCha20`
-6. `Camellia`
-7. `SEED`
+1. `3DES`
+2. `AES-CBC`
+3. `AES-GCM`
+4. `ChaCha20`
+5. `Camellia`
 
 
 Cryptographic Message Authentication Code(Base on OpenSSL Built)
 -------------
 
 1. `MD5`
-2. `SHA256`
-3. `SHA384`
-4. `Poly1305`
+2. `SHA1`
+3. `SHA128`
+4. `SHA256`
+5. `SHA384`
+6. `SHA512`
+7. `Poly1305`
 
 Digital Signature Algorithm(Base on OpenSSL Built)
 -------------

@@ -4,6 +4,7 @@
 	* [Nethook](Configuration/Nethook-Configuration.md)
 	* [Listening](Configuration/Listening-Configuration.md)
 	* [kerctl](Configuration/kerctl-Configuration.md)
+	* [nwctl](Configuration/nwctl-Configuration.md)
 * [Commands](Commands/Commands.md)
 	* Core
 		* [enlighten](Commands/enlighten.md)
@@ -22,3 +23,4 @@
 		* [kerctl](Commands/kerctl.md)
 		* [cryptvrfy](Commands/cryptvrfy.md)
 		* [upelt](Commands/upelt.md)
+		* [nwctl](Commands/nwctl.md)

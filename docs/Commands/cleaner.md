@@ -17,7 +17,8 @@ Clean expired certificate
 
 Clean expired tracking table entry
     tracking
-        --name,  -n    Tracking table name to clean
+        --name,     -n    Tracking table name to clean
+        --timeout,  -t    Timeout seconds
 
 Clear all named shared memory that belong to Enlighten
     shm
@@ -42,7 +43,7 @@ Example 2 Clean expired tracking table entry
 -----------
 
 ```
-$ sudo cleaner tracking --name ST1
+$ sudo cleaner tracking --name ST1 --timeout 5
 42 entry is removed
 ```
 

@@ -107,7 +107,7 @@ $ config listening-tcp-forward
        "ConnectingUpstreamTimeout": false,
        "ConnectingUpstreamReset": false,
        "ConnectedUpstream": false,
-       "TCPEstablished": false,
+       "Established": false,
        "ForwardingFinished": false,
        "SSLPeekClientHelloTimeout": false,
        "NotSSL": false,

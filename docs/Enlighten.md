@@ -8,7 +8,7 @@ Features
 * `ARP`, `NDP` Cache and Responser.
 * `DH Param`.
 * `Downgrade Attack Prevention`.
-* `Graceful Shutdown TCP Connections`.
+* `Graceful Shutdown Connections`.
 * `IPv4/IPv6`.
 * `JA3`, `JA3S`.
 * `Log Rotation`.
@@ -64,23 +64,19 @@ Supported Named Groups(Base on OpenSSL Built)
 Symmetric Key(Base on OpenSSL Built)
 -------------
 
-1. `3DES`
-2. `AES-CBC`
-3. `AES-GCM`
-4. `ChaCha20`
-5. `Camellia`
-
+1. `AES-CBC`
+2. `AES-GCM`
+3. `ChaCha20`
 
 Cryptographic Message Authentication Code(Base on OpenSSL Built)
 -------------
 
-1. `MD5`
-2. `SHA1`
-3. `SHA128`
-4. `SHA256`
-5. `SHA384`
-6. `SHA512`
-7. `Poly1305`
+1. `SHA1`
+2. `SHA128`
+3. `SHA256`
+4. `SHA384`
+5. `SHA512`
+6. `Poly1305`
 
 Digital Signature Algorithm(Base on OpenSSL Built)
 -------------
@@ -141,11 +137,11 @@ Statistics
 17. `Connecting upstream timeout`
 18. `Connecting upstream reset`
 19. `Connected upstream`
-20. `Decryption side TCP established`
-21. `Encryption side TCP established`
+20. `Decryption side established`
+21. `Encryption side established`
 22. `Decryption side TCP session concurrent`
 23. `Encryption side TCP session concurrent`
-24. `TCP established`
+24. `Established`
 25. `TCP session concurrent`
 26. `SSL peek ClientHello timeout`
 27. `Is not SSL`
@@ -158,50 +154,51 @@ Statistics
 34. `SSL accepting downstream`
 35. `SSL accepting downstream timeout`
 36. `SSL accepting downstream failed`
-37. `SSL established`
-38. `SSL session concurrent`
-39. `Decryption side downstream recevied bytes`
-40. `Decryption side downstream sent bytes`
-41. `Decryption side upstream recevied bytes`
-42. `Decryption side upstream sent bytes`
-43. `Encryption side downstream recevied bytes`
-44. `Encryption side downstream sent bytes`
-45. `Encryption side upstream recevied bytes`
-46. `Encryption side upstream sent bytes`
-47. `Downstream recevied bytes`
-48. `Downstream sent bytes`
-49. `Upstream recevied bytes`
-50. `Upstream sent bytes`
-51. `Decryption side downstream recevied bytes per second`
-52. `Decryption side downstream sent bytes per second`
-53. `Decryption side upstream recevied bytes per second`
-54. `Decryption side upstream sent bytes per second`
-55. `Encryption side downstream recevied bytes per second`
-56. `Encryption side downstream sent bytes per second`
-57. `Encryption side upstream recevied bytes per second`
-58. `Encryption side upstream sent bytes per second`
-59. `Downstream recevied bytes per second`
-60. `Downstream sent bytes per second`
-61. `Upstream recevied bytes per second`
-62. `Upstream sent bytes per second`
-63. `Decryption side downstream recevied bytes per second peak`
-64. `Decryption side downstream sent bytes per second peak`
-65. `Decryption side upstream recevied bytes per second peak`
-66. `Decryption side upstream sent bytes per second peak`
-67. `Encryption side downstream recevied bytes per second peak`
-68. `Encryption side downstream sent bytes per second peak`
-69. `Encryption side upstream recevied bytes per second peak`
-70. `Encryption side upstream sent bytes per second peak`
-71. `Downstream recevied bytes per second peak`
-72. `Downstream sent bytes per second peak`
-73. `Upstream recevied bytes per second peak`
-74. `Upstream sent bytes per second peak`
-75. `Decryption side TCP session concurrent peak`
-76. `Encryption side TCP session concurrent peak`
-77. `TCP session concurrent peak`
-78. `SSL session concurrent peak`
-79. `Certificate in cache`
-80. `Downstream SSL version`
+37. `SSL accepted downstream`
+38. `SSL established`
+39. `SSL session concurrent`
+40. `Decryption side downstream recevied bytes`
+41. `Decryption side downstream sent bytes`
+42. `Decryption side upstream recevied bytes`
+43. `Decryption side upstream sent bytes`
+44. `Encryption side downstream recevied bytes`
+45. `Encryption side downstream sent bytes`
+46. `Encryption side upstream recevied bytes`
+47. `Encryption side upstream sent bytes`
+48. `Downstream recevied bytes`
+49. `Downstream sent bytes`
+50. `Upstream recevied bytes`
+51. `Upstream sent bytes`
+52. `Decryption side downstream recevied bytes per second`
+53. `Decryption side downstream sent bytes per second`
+54. `Decryption side upstream recevied bytes per second`
+55. `Decryption side upstream sent bytes per second`
+56. `Encryption side downstream recevied bytes per second`
+57. `Encryption side downstream sent bytes per second`
+58. `Encryption side upstream recevied bytes per second`
+59. `Encryption side upstream sent bytes per second`
+60. `Downstream recevied bytes per second`
+61. `Downstream sent bytes per second`
+62. `Upstream recevied bytes per second`
+63. `Upstream sent bytes per second`
+64. `Decryption side downstream recevied bytes per second peak`
+65. `Decryption side downstream sent bytes per second peak`
+66. `Decryption side upstream recevied bytes per second peak`
+67. `Decryption side upstream sent bytes per second peak`
+68. `Encryption side downstream recevied bytes per second peak`
+69. `Encryption side downstream sent bytes per second peak`
+70. `Encryption side upstream recevied bytes per second peak`
+71. `Encryption side upstream sent bytes per second peak`
+72. `Downstream recevied bytes per second peak`
+73. `Downstream sent bytes per second peak`
+74. `Upstream recevied bytes per second peak`
+75. `Upstream sent bytes per second peak`
+76. `Decryption side TCP session concurrent peak`
+77. `Encryption side TCP session concurrent peak`
+78. `TCP session concurrent peak`
+79. `SSL session concurrent peak`
+80. `Certificate in cache`
+81. `Downstream SSL version`
     * `SSLv2`
     * `SSLv3`
     * `TLSv1.0`
@@ -209,7 +206,7 @@ Statistics
     * `TLSv1.2`
     * `TLSv1.3`
     * `Unknown`
-81. `Upstream SSL version`
+82. `Upstream SSL version`
     * `SSLv2`
     * `SSLv3`
     * `TLSv1.0`
@@ -217,8 +214,8 @@ Statistics
     * `TLSv1.2`
     * `TLSv1.3`
     * `Unknown`
-82. `Downstream SSL cipher`
-83. `Upstream SSL cipher`
+83. `Downstream SSL cipher`
+84. `Upstream SSL cipher`
 
 Network Simulator
 ------------------
@@ -257,43 +254,43 @@ Syslog
 
 <h4>Accepting Downstream(MSGID: 1)</h4>
 
-* `<134>1 %Z - enlighten - 1 - BOM%P and %P TCP downstream is accepting`
-* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 1 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 TCP downstream is accepting`
+* `<134>1 %Z - enlighten - 1 - BOM%P and %P downstream is accepting`
+* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 1 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 downstream is accepting`
 
 <h4>Accepting Downstream Denied(MSGID: 2)</h4>
 
-* `<133>1 %Z - enlighten - 2 - BOM%P and %P TCP downstream accepting is denied`
-* `<local0.notice>1 2020-03-03T02:02:02.000012Z - enlighten - 2 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 TCP downstream accepting is denied`
+* `<133>1 %Z - enlighten - 2 - BOM%P and %P downstream accepting is denied`
+* `<local0.notice>1 2020-03-03T02:02:02.000012Z - enlighten - 2 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 downstream accepting is denied`
 
 <h4>Accepted Downstream(MSGID: 3)</h4>
 
-* `<134>1 %Z - enlighten - 3 - BOM%P and %P TCP downstream is accepted`
-* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 3 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 TCP downstream is accepted`
+* `<134>1 %Z - enlighten - 3 - BOM%P and %P downstream is accepted`
+* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 3 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 downstream is accepted`
 
 <h4>Connecting Upstream(MSGID: 4)</h4>
 
-* `<134>1 %Z - enlighten - 4 - BOM%P and %P TCP upstream is connecting`
-* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 4 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 TCP upstream is connecting`
+* `<134>1 %Z - enlighten - 4 - BOM%P and %P upstream is connecting`
+* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 4 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 upstream is connecting`
 
 <h4>Connecting Upstream Timeout(MSGID: 5)</h4>
 
-* `<133>1 %Z - enlighten - 5 - BOM%P and %P TCP upstream connecting is timeout`
-* `<local0.notice>1 2020-03-03T02:02:02.000012Z - enlighten - 5 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 TCP upstream connecting is timeout`
+* `<133>1 %Z - enlighten - 5 - BOM%P and %P upstream connecting is timeout`
+* `<local0.notice>1 2020-03-03T02:02:02.000012Z - enlighten - 5 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 upstream connecting is timeout`
 
 <h4>Connecting Upstream Reset(MSGID: 6)</h4>
 
-* `<133>1 %Z - enlighten - 6 - BOM%P and %P TCP upstream connecting is reset`
-* `<local0.notice>1 2020-03-03T02:02:02.000012Z - enlighten - 6 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 TCP upstream connecting is reset`
+* `<133>1 %Z - enlighten - 6 - BOM%P and %P upstream connecting is reset`
+* `<local0.notice>1 2020-03-03T02:02:02.000012Z - enlighten - 6 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 upstream connecting is reset`
 
 <h4>Connected Upstream(MSGID: 7)</h4>
 
-* `<134>1 %Z - enlighten - 7 - BOM%P and %P TCP upstream is connected`
-* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 7 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 TCP upstream is connected`
+* `<134>1 %Z - enlighten - 7 - BOM%P and %P upstream is connected`
+* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 7 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 upstream is connected`
 
-<h4>TCP Established(MSGID: 8)</h4>
+<h4>Established(MSGID: 8)</h4>
 
-* `<134>1 %Z - enlighten - 8 - BOM%P and %P TCP stream proxy has been established`
-* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 8 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 TCP stream proxy has been established`
+* `<134>1 %Z - enlighten - 8 - BOM%P and %P stream proxy has been established`
+* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 8 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 stream proxy has been established`
 
 <h4>Forwarding Finished(MSGID: 9)</h4>
 
@@ -451,38 +448,38 @@ Certificate information combine into one message, the disabled item is show as `
 
 <h4>Decryption Side Accepting Downstream(MSGID: 38)</h4>
 
-* `<134>1 %Z - enlighten - 38 - BOM%P and %P decrypt side TCP downstream is accepting`
-* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 38 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 decrypt side TCP downstream is accepting`
+* `<134>1 %Z - enlighten - 38 - BOM%P and %P decrypt side downstream is accepting`
+* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 38 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 decrypt side downstream is accepting`
 
 <h4>Decryption Side Accepted Downstream(MSGID: 39)</h4>
 
-* `<134>1 %Z - enlighten - 39 - BOM%P and %P decrypt side TCP downstream is accepted`
-* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 39 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 decrypt side TCP downstream is accepted`
+* `<134>1 %Z - enlighten - 39 - BOM%P and %P decrypt side downstream is accepted`
+* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 39 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 decrypt side downstream is accepted`
 
 <h4>Decryption Side Connecting Upstream(MSGID: 40)</h4>
 
-* `<134>1 %Z - enlighten - 40 - BOM%P and %P decrypt side TCP upstream is connecting`
-* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 40 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 decrypt side TCP upstream is connecting`
+* `<134>1 %Z - enlighten - 40 - BOM%P and %P decrypt side upstream is connecting`
+* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 40 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 decrypt side upstream is connecting`
 
 <h4>Decryption Side Connecting Upstream Timeout(MSGID: 41)</h4>
 
-* `<133>1 %Z - enlighten - 41 - BOM%P and %P decrypt side TCP upstream connecting is timeout`
-* `<local0.notice>1 2020-03-03T02:02:02.000012Z - enlighten - 41 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 decrypt side TCP upstream connecting is timeout`
+* `<133>1 %Z - enlighten - 41 - BOM%P and %P decrypt side upstream connecting is timeout`
+* `<local0.notice>1 2020-03-03T02:02:02.000012Z - enlighten - 41 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 decrypt side upstream connecting is timeout`
 
 <h4>Decryption Side Connecting Upstream Reset(MSGID: 42)</h4>
 
-* `<133>1 %Z - enlighten - 42 - BOM%P and %P decrypt side TCP upstream connecting is reset`
-* `<local0.notice>1 2020-03-03T02:02:02.000012Z - enlighten - 42 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 decrypt side TCP upstream connecting is reset`
+* `<133>1 %Z - enlighten - 42 - BOM%P and %P decrypt side upstream connecting is reset`
+* `<local0.notice>1 2020-03-03T02:02:02.000012Z - enlighten - 42 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 decrypt side upstream connecting is reset`
 
 <h4>Decryption Side Connected Upstream(MSGID: 43)</h4>
 
-* `<134>1 %Z - enlighten - 43 - BOM%P and %P decrypt side TCP upstream is connected`
-* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 43 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 decrypt side TCP upstream is connected`
+* `<134>1 %Z - enlighten - 43 - BOM%P and %P decrypt side upstream is connected`
+* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 43 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 decrypt side upstream is connected`
 
-<h4>Decryption Side TCP Established(MSGID: 44)</h4>
+<h4>Decryption Side Established(MSGID: 44)</h4>
 
-* `<134>1 %Z - enlighten - 44 - BOM%P and %P decrypt side TCP stream proxy has been established`
-* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 44 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 decrypt side TCP stream proxy has been established`
+* `<134>1 %Z - enlighten - 44 - BOM%P and %P decrypt side stream proxy has been established`
+* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 44 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 decrypt side stream proxy has been established`
 
 <h4>Decryption Side Forwarding Finished(MSGID: 45)</h4>
 
@@ -491,43 +488,43 @@ Certificate information combine into one message, the disabled item is show as `
 
 <h4>Encryption Side Accepting Downstream(MSGID: 46)</h4>
 
-* `<134>1 %Z - enlighten - 46 - BOM%P and %P encrypt side TCP downstream is accepting`
-* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 46 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 encrypt side TCP downstream is accepting`
+* `<134>1 %Z - enlighten - 46 - BOM%P and %P encrypt side downstream is accepting`
+* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 46 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 encrypt side downstream is accepting`
 
 <h4>Encryption Side Accepted Downstream(MSGID: 47)</h4>
 
-* `<134>1 %Z - enlighten - 47 - BOM%P and %P encrypt side TCP downstream is accepted`
-* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 47 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 encrypt side TCP downstream is accepted`
+* `<134>1 %Z - enlighten - 47 - BOM%P and %P encrypt side downstream is accepted`
+* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 47 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 encrypt side downstream is accepted`
 
 <h4>Encryption Side Accepting Dowstream Timeout(MSGID: 48)</h4>
 
-* `<133>1 %Z - enlighten - 48 - BOM%P and %P encrypt side TCP downstream accepting is timeout`
-* `<local0.notice>1 2020-03-03T02:02:02.000012Z - enlighten - 48 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 encrypt side TCP downstream accepting is timeout`
+* `<133>1 %Z - enlighten - 48 - BOM%P and %P encrypt side downstream accepting is timeout`
+* `<local0.notice>1 2020-03-03T02:02:02.000012Z - enlighten - 48 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 encrypt side downstream accepting is timeout`
 
 <h4>Encryption Side Connecting Upstream(MSGID: 49)</h4>
 
-* `<134>1 %Z - enlighten - 49 - BOM%P and %P encrypt side TCP upstream is connecting`
-* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 49 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 encrypt side TCP upstream is connecting`
+* `<134>1 %Z - enlighten - 49 - BOM%P and %P encrypt side upstream is connecting`
+* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 49 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 encrypt side upstream is connecting`
 
 <h4>Encryption Side Connecting Upstream Timeout(MSGID: 50)</h4>
 
-* `<133>1 %Z - enlighten - 50 - BOM%P and %P encrypt side TCP upstream connecting is timeout`
-* `<local0.notice>1 2020-03-03T02:02:02.000012Z - enlighten - 50 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 encrypt side TCP upstream connecting is timeout`
+* `<133>1 %Z - enlighten - 50 - BOM%P and %P encrypt side upstream connecting is timeout`
+* `<local0.notice>1 2020-03-03T02:02:02.000012Z - enlighten - 50 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 encrypt side upstream connecting is timeout`
 
 <h4>Encryption Side Connecting Upstream Reset(MSGID: 51)</h4>
 
-* `<133>1 %Z - enlighten - 51 - BOM%P and %P encrypt side TCP upstream connecting is reset`
-* `<local0.notice>1 2020-03-03T02:02:02.000012Z - enlighten - 51 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 encrypt side TCP upstream connecting is reset`
+* `<133>1 %Z - enlighten - 51 - BOM%P and %P encrypt side upstream connecting is reset`
+* `<local0.notice>1 2020-03-03T02:02:02.000012Z - enlighten - 51 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 encrypt side upstream connecting is reset`
 
 <h4>Encryption Side Connected Upstream(MSGID: 52)</h4>
 
-* `<134>1 %Z - enlighten - 52 - BOM%P and %P encrypt side TCP upstream is connected`
-* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 52 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 encrypt side TCP upstream is connected`
+* `<134>1 %Z - enlighten - 52 - BOM%P and %P encrypt side upstream is connected`
+* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 52 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 encrypt side upstream is connected`
 
-<h4>Encryption Side TCP Established(MSGID: 53)</h4>
+<h4>Encryption Side Established(MSGID: 53)</h4>
 
-* `<134>1 %Z - enlighten - 53 - BOM%P and %P encrypt side TCP stream proxy has been established`
-* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 53 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 encrypt side TCP stream proxy has been established`
+* `<134>1 %Z - enlighten - 53 - BOM%P and %P encrypt side stream proxy has been established`
+* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 53 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 encrypt side stream proxy has been established`
 
 <h4>Encryption Side Forwarding Finished(MSGID: 54)</h4>
 

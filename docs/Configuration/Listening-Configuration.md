@@ -106,7 +106,7 @@ Accept: `off`, `none` or numbers, number must be greater than zero.
 |         ConnectingUpstreamTimeout        |          Connecting Upstream Timeout         |  Boolean  |     Checkbox    |      -     |             -            |
 |          ConnectingUpstreamReset         |           Connecting Upstream Reset          |  Boolean  |     Checkbox    |      -     |             -            |
 |             ConnectedUpstream            |              Connected Upstream              |  Boolean  |     Checkbox    |      -     |             -            |
-|              TCPEstablished              |                TCP Established               |  Boolean  |     Checkbox    |      -     |             -            |
+|              Established              |                Established               |  Boolean  |     Checkbox    |      -     |             -            |
 |            ForwardingFinished            |              Forwarding Finished             |  Boolean  |     Checkbox    |      -     |             -            |
 |         SSLPeekClientHelloTimeout        |         SSL Peek ClientHello Timeout         |  Boolean  |     Checkbox    |      -     | Yes, It's "ClientHello". |
 |                  NotSSL                  |                    Not SSL                   |  Boolean  |     Checkbox    |      -     |             -            |
@@ -154,13 +154,13 @@ Accept: `off`, `none` or numbers, number must be greater than zero.
 | DecryptConnectingUpstreamTimeout | Decryption Connecting Upstream Timeout |  Boolean  |     Checkbox    |      -     |             -            |
 | DecryptConnectingUpstreamReset | Decryption Connecting Upstream Reset |  Boolean  |     Checkbox    |      -     |             -            |
 | DecryptConnectedUpstream | Decryption Connected Upstream |  Boolean  |     Checkbox    |      -     |             -            |
-| DecryptTCPEstablished | Decryption TCP Established |  Boolean  |     Checkbox    |      -     |             -            |
+| DecryptEstablished | Decryption Established |  Boolean  |     Checkbox    |      -     |             -            |
 | DecryptForwardingFinished | Decryption Forwarding Finished |  Boolean  |     Checkbox    |      -     |             -            |
 | EncryptConnectingUpstream | Encryption Connecting Upstream |  Boolean  |     Checkbox    |      -     |             -            |
 | EncryptConnectingUpstreamTimeout | Encryption Connecting Upstream Timeout |  Boolean  |     Checkbox    |      -     |             -            |
 | EncryptConnectingUpstreamReset | Encryption Connecting Upstream Reset |  Boolean  |     Checkbox    |      -     |             -            |
 | EncryptConnectedUpstream | Encryption Connected Upstream |  Boolean  |     Checkbox    |      -     |             -            |
-| EncryptTCPEstablished | Encryption TCP Established |  Boolean  |     Checkbox    |      -     |             -            |
+| EncryptEstablished | Encryption Established |  Boolean  |     Checkbox    |      -     |             -            |
 | EncryptForwardingFinished | Encryption Forwarding Finished |  Boolean  |     Checkbox    |      -     |             -            |
 |         SSLPeekClientHelloTimeout        |         SSL Peek ClientHello Timeout         |  Boolean  |     Checkbox    |      -     | Yes, It's "ClientHello". |
 |                  NotSSL                  |                    Not SSL                   |  Boolean  |     Checkbox    |      -     |             -            |

@@ -157,41 +157,41 @@ Statistics
 37. `SSL accepted downstream`
 38. `SSL established`
 39. `SSL session concurrent`
-40. `Decryption side downstream recevied bytes`
+40. `Decryption side downstream received bytes`
 41. `Decryption side downstream sent bytes`
-42. `Decryption side upstream recevied bytes`
+42. `Decryption side upstream received bytes`
 43. `Decryption side upstream sent bytes`
-44. `Encryption side downstream recevied bytes`
+44. `Encryption side downstream received bytes`
 45. `Encryption side downstream sent bytes`
-46. `Encryption side upstream recevied bytes`
+46. `Encryption side upstream received bytes`
 47. `Encryption side upstream sent bytes`
-48. `Downstream recevied bytes`
+48. `Downstream received bytes`
 49. `Downstream sent bytes`
-50. `Upstream recevied bytes`
+50. `Upstream received bytes`
 51. `Upstream sent bytes`
-52. `Decryption side downstream recevied bytes per second`
+52. `Decryption side downstream received bytes per second`
 53. `Decryption side downstream sent bytes per second`
-54. `Decryption side upstream recevied bytes per second`
+54. `Decryption side upstream received bytes per second`
 55. `Decryption side upstream sent bytes per second`
-56. `Encryption side downstream recevied bytes per second`
+56. `Encryption side downstream received bytes per second`
 57. `Encryption side downstream sent bytes per second`
-58. `Encryption side upstream recevied bytes per second`
+58. `Encryption side upstream received bytes per second`
 59. `Encryption side upstream sent bytes per second`
-60. `Downstream recevied bytes per second`
+60. `Downstream received bytes per second`
 61. `Downstream sent bytes per second`
-62. `Upstream recevied bytes per second`
+62. `Upstream received bytes per second`
 63. `Upstream sent bytes per second`
-64. `Decryption side downstream recevied bytes per second peak`
+64. `Decryption side downstream received bytes per second peak`
 65. `Decryption side downstream sent bytes per second peak`
-66. `Decryption side upstream recevied bytes per second peak`
+66. `Decryption side upstream received bytes per second peak`
 67. `Decryption side upstream sent bytes per second peak`
-68. `Encryption side downstream recevied bytes per second peak`
+68. `Encryption side downstream received bytes per second peak`
 69. `Encryption side downstream sent bytes per second peak`
-70. `Encryption side upstream recevied bytes per second peak`
+70. `Encryption side upstream received bytes per second peak`
 71. `Encryption side upstream sent bytes per second peak`
-72. `Downstream recevied bytes per second peak`
+72. `Downstream received bytes per second peak`
 73. `Downstream sent bytes per second peak`
-74. `Upstream recevied bytes per second peak`
+74. `Upstream received bytes per second peak`
 75. `Upstream sent bytes per second peak`
 76. `Decryption side TCP session concurrent peak`
 77. `Encryption side TCP session concurrent peak`

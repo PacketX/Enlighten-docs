@@ -4,6 +4,7 @@ Enlighten
 Features
 ------------
 
+* `TCP/UDP`.
 * `ALPN`.
 * `ARP`, `NDP` Cache and Responser.
 * `DH Param`.
@@ -39,6 +40,7 @@ Proxy mode
 3. `SSL/TLS to TCP`(Offload forward)
 4. `TCP to SSL/TLS`(Onload forward)
 5. `SSL/TLS to TCP - TCP to SSL/TLS`(IPS mode)
+6. `UDP to UDP`(Plain-Text forward)
 
 Dynamic Generating Forged Certificates
 -------------
@@ -139,10 +141,10 @@ Statistics
 19. `Connected upstream`
 20. `Decryption side established`
 21. `Encryption side established`
-22. `Decryption side TCP session concurrent`
-23. `Encryption side TCP session concurrent`
+22. `Decryption side TCP/UDP session concurrent`
+23. `Encryption side TCP/UDP session concurrent`
 24. `Established`
-25. `TCP session concurrent`
+25. `TCP/UDP session concurrent`
 26. `SSL peek ClientHello timeout`
 27. `Is not SSL`
 28. `Block SNI`
@@ -193,12 +195,20 @@ Statistics
 73. `Downstream sent bytes per second peak`
 74. `Upstream received bytes per second peak`
 75. `Upstream sent bytes per second peak`
-76. `Decryption side TCP session concurrent peak`
-77. `Encryption side TCP session concurrent peak`
-78. `TCP session concurrent peak`
+76. `Decryption side TCP/UDP session concurrent peak`
+77. `Encryption side TCP/UDP session concurrent peak`
+78. `TCP/UDP session concurrent peak`
 79. `SSL session concurrent peak`
-80. `Certificate in cache`
-81. `Downstream SSL version`
+80. `Decryption side TCP/UDP connection per second`
+81. `Encryption side TCP/UDP connection per second`
+82. `TCP/UDP connection per second`
+83. `SSL connection per second`
+84. `Decryption side TCP/UDP connection per second peak`
+85. `Encryption side TCP/UDP connection per second peak`
+86. `TCP/UDP connection per second peak`
+87. `SSL connection per second peak`
+88. `Certificate in cache`
+89. `Downstream SSL version`
     * `SSLv2`
     * `SSLv3`
     * `TLSv1.0`
@@ -206,7 +216,7 @@ Statistics
     * `TLSv1.2`
     * `TLSv1.3`
     * `Unknown`
-82. `Upstream SSL version`
+90. `Upstream SSL version`
     * `SSLv2`
     * `SSLv3`
     * `TLSv1.0`
@@ -214,8 +224,8 @@ Statistics
     * `TLSv1.2`
     * `TLSv1.3`
     * `Unknown`
-83. `Downstream SSL cipher`
-84. `Upstream SSL cipher`
+91. `Downstream SSL cipher`
+92. `Upstream SSL cipher`
 
 Network Simulator
 ------------------

@@ -30,7 +30,7 @@ Features
 * Statistics.
 * Syslog.
 * TCP/IP Stack Adjustment.
-* Timer resolution.
+* Timer Resolution.
 
 Proxy mode
 -------------

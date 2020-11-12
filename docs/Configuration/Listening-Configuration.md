@@ -36,6 +36,8 @@ Configuration
 |         GracefulTimeout        |          Graceful Timeout         |     Integer     |        Textbox(Number)        |      Greater Than 0     |                       -                      |
 |              JA3              |                JA3               |     Boolean     |            Checkbox           |            -            |                       -                      |
 |              JA3S             |               JA3S               |     Boolean     |            Checkbox           |            -            |                       -                      |
+|              ProxyRequests             |               Proxy Requests               |     Integer     |            Textbox(Number)           |            -            |                       Greater or Equal to 0                      |
+|              ProxyResponses             |               Proxy Responses               |     Integer     |            Textbox(Number)           |            -            |                       -                      |
 |              Deny             |               Deny               |      Object     |               -               |        Must Exist       |             See [Bundle](#bundle)            |
 |           SSLEngine           |                 -                |      String     |               -               |            -            |                       -                      |
 |          SSLEarlyData         |          SSL Early Data          |     Boolean     |            Checkbox           |            -            |                       -                      |

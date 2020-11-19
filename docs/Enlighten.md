@@ -394,7 +394,7 @@ Certificate information combine into one message, the disabled item is show as `
 
 * `<134>1 %Z - enlighten - 26 - BOM%P and %P SSL upstream SNI '%S' certificate '%d/%d' serial number: '%s'`
 * `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 26 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 SSL SNI 'www.example.com' certificate '1/3' serial number: '7c:b8:49:16:b0:9a:48:7d:02:00:00:00:00:5b:67:79'`
-* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 26 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 SSL SNI 'www.example.com' certificate '1/3' serial number: '-7c:b8:49:16:b0:9a:48:7d:02:00:00:00:00:5b:67:79'`
+* `<local0.info>1 2020-03-03T02:02:02.000012Z - enlighten - 26 - BOM[192.168.2.10]:46204 and [192.168.2.100]:443 SSL SNI 'www.example.com' certificate '1/3' serial number: '(Negative)7c:b8:49:16:b0:9a:48:7d:02:00:00:00:00:5b:67:79'`
 
 <h4>SSL Upstream Certificate Signature Algorithm(MSGID: 27)</h4>
 

@@ -8,77 +8,78 @@ Configuration
 
 <h3>Core</h3>
 
-|              Key              |              Prompt              |    Json Type    |             Style             |        Validation       |                     Note                     |
-|:-----------------------------:|:--------------------------------:|:---------------:|:-----------------------------:|:-----------------------:|:--------------------------------------------:|
-|           IPS          |            -           |     Boolean     |            -           |            -            |                       Don't Change Default Value                      |
-|           MessageLog          |            Message Log           |     Boolean     |            Checkbox           |            -            |                       -                      |
-|            ErrorLog           |             Error Log            |     Boolean     |            Checkbox           |            -            |                       -                      |
-|           SessionLog          |            Session Log           |     Boolean     |            Checkbox           |            -            |                       -                      |
-|          SSLErrorLog          |           SSL Error Log          |     Boolean     |            Checkbox           |            -            |                       -                      |
-|            MaxCore            |                 -                |     Integer     |               -               |            -            |          Don't Change Default Value          |
-|          BindNethook          |                 -                |      String     |               -               |            -            |          Don't Change Default Value          |
-|            BindPort           |                 -                |     Integer     |               -               |            -            |          Don't Change Default Value          |
-|            Backlog            |              Backlog             |     Integer     |        Textbox(Number)        | Greater or Equal to 511 |                       -                      |
-|         MaxConcurrent         |                 -                |     Integer     |               -               |            -            |          Don't Change Default Value          |
-|       TrackingTableName       |                 -                |      String     |               -               |            -            |          Don't Change Default Value          |
-|        TimerResolution        |         Timer Resolution         |     Integer     |        Textbox(Number)        | Greater or Equal to 0 |                       -                      |
-|           KeepAccept          |            Keep Accept           |     Boolean     |            Checkbox           |            -            |                       -                      |
-|           TCPNoDelay          |           TCP No Delay           |     Boolean     |            Checkbox           |            -            |                       -                      |
-|          TCPKeepAlive         |          TCP Keep Alive          |     Boolean     |            Checkbox           |            -            |                       -                      |
-|        ProxyBufferSize        |         Proxy Buffer Size        |     Integer     |        Textbox(Number)        |      Greater Than 0     |                       -                      |
-|         ConnectTimeout        |          Connect Timeout         |     Integer     |        Textbox(Number)        |      Greater Than 0     |                       -                      |
-|          ConnectRetry         |           Connect Retry          |     Integer     |        Textbox(Number)        | Greater or Equal to 0 |                       -                      |
-|          ProxyTimeout         |           Proxy Timeout          |     Integer     |        Textbox(Number)        |      Greater Than 0     |                       -                      |
-|          DownloadRate         |           Download Rate          |     Integer     |        Textbox(Number)        | Greater or Equal to 0 |                       -                      |
-|           UploadRate          |            Upload Rate           |     Integer     |        Textbox(Number)        | Greater or Equal to 0 |                       -                      |
-|           IPv6          |            IPv6           |     Boolean     |            Checkbox           |            -            |                       -                      |
-|           IPv6Only          |            IPv6 Only           |     Boolean     |            Checkbox           |            -            |                       -                      |
-|         GracefulTimeout        |          Graceful Timeout         |     Integer     |        Textbox(Number)        |      Greater Than 0     |                       -                      |
-|              JA3              |                JA3               |     Boolean     |            Checkbox           |            -            |                       -                      |
-|              JA3S             |               JA3S               |     Boolean     |            Checkbox           |            -            |                       -                      |
-|              ProxyRequests             |               Proxy Requests               |     Integer     |            Textbox(Number)           |            -            |                       Greater or Equal to 0                      |
-|              ProxyResponses             |               Proxy Responses               |     Integer     |            Textbox(Number)           |            -            |                       -                      |
-|              Deny             |               Deny               |      Object     |               -               |        Must Exist       |             See [Bundle](#bundle)            |
-|           SSLEngine           |                 -                |      String     |               -               |            -            |                       -                      |
-|          SSLEarlyData         |          SSL Early Data          |     Boolean     |            Checkbox           |            -            |                       -                      |
-|           DropNotSSL          |           Drop Not SSL           |     Boolean     |            Checkbox           |            -            |                       -                      |
-|         SSLDownstream         |          -          |     Boolean     |            -           |            -            |              Don't Change Default Value             |
-|   SSLDownstreamALPNAcception  |   SSL Downstream ALPN Acception  | Array of String | Textarea(String per One Line) |            -            |                       -                      |
-|      SSLDownstreamBypass      |       SSL Downstream Bypass      |      Object     |               -               |            -            |             See [Bundle](#bundle)            |
-|       SSLDownstreamBlock      |       SSL Downstream Block       |      Object     |               -               |            -            |             See [Bundle](#bundle)            |
-|           SSLRootCA           |            SSL Root CA           |      String     |     Upload File(One File)     |      Must One File      |       -      |
-|          SSLRootCAKey         |          SSL Root CA Key          |      String     |     Upload File(One File)     |      Must One File      |       -      |
-|     SSLRootCAPasswordFile     |     SSL Root CA Password File    | Array of String |   Upload Files(Multi-Files)   |            -            |       -      |
-| SSLDownstreamHandshakeTimeout | SSL Downstream Handshake Timeout |     Integer     |        Textbox(Number)        |      Greater Than 0     |                       -                      |
-|           SSLDHparam          |           SSL DH Param           |      String     |     Upload File(One File)     |            -            |       -      |
-|          SSLECDHCurve         |          SSL ECDH Curve          |      String     |            Textbox            |     -    |              -             |
-|      SSLDownstreamCiphers     |      SSL Downstream Ciphers      |      String     |            Textbox            |      -      |            -           |
-|     SSLPreferServerCiphers    |     SSL Prefer Server Ciphers    |     Boolean     |            Checkbox           |            -            |                       -                      |
-|    SSLDownstreamMinVersion    |  SSL Downstream Minimum Version  |      String     |         Select Option         |    -    |        -       |
-|    SSLDownstreamMaxVersion    |  SSL Downstream Maximum Version  |      String     |         Select Option         |    -    |        -       |
-|       SSLSessionTimeout       |        SSL Session Timeout       |     Integer     |        Textbox(Number)        |      Greater Than 0     |                       -                      |
+|              Key              |              Prompt              |    Json Type    |             Style             |        Validation       |                     Note                    |
+|:-----------------------------:|:--------------------------------:|:---------------:|:-----------------------------:|:-----------------------:|:-------------------------------------------:|
+|              IPS              |                 -                |     Boolean     |               -               |            -            |          Don't Change Default Value         |
+|           MessageLog          |            Message Log           |     Boolean     |            Checkbox           |            -            |                      -                      |
+|            ErrorLog           |             Error Log            |     Boolean     |            Checkbox           |            -            |                      -                      |
+|           SessionLog          |            Session Log           |     Boolean     |            Checkbox           |            -            |                      -                      |
+|          SSLErrorLog          |           SSL Error Log          |     Boolean     |            Checkbox           |            -            |                      -                      |
+|            MaxCore            |                 -                |     Integer     |               -               |            -            |          Don't Change Default Value         |
+|          BindNethook          |                 -                |      String     |               -               |            -            |          Don't Change Default Value         |
+|            BindPort           |                 -                |     Integer     |               -               |            -            |          Don't Change Default Value         |
+|            Backlog            |              Backlog             |     Integer     |        Textbox(Number)        | Greater or Equal to 511 |                      -                      |
+|         MaxConcurrent         |                 -                |     Integer     |               -               |            -            |          Don't Change Default Value         |
+|       TrackingTableName       |                 -                |      String     |               -               |            -            |          Don't Change Default Value         |
+|        TimerResolution        |         Timer Resolution         |     Integer     |        Textbox(Number)        |  Greater or Equal to 0  |                      -                      |
+|           KeepAccept          |            Keep Accept           |     Boolean     |            Checkbox           |            -            |                      -                      |
+|           TCPNoDelay          |           TCP No Delay           |     Boolean     |            Checkbox           |            -            |                      -                      |
+|          TCPKeepAlive         |          TCP Keep Alive          |     Boolean     |            Checkbox           |            -            |                      -                      |
+|        ProxyBufferSize        |         Proxy Buffer Size        |     Integer     |        Textbox(Number)        |      Greater Than 0     |                      -                      |
+|         ConnectTimeout        |          Connect Timeout         |     Integer     |        Textbox(Number)        |      Greater Than 0     |                      -                      |
+|          ConnectRetry         |           Connect Retry          |     Integer     |        Textbox(Number)        |  Greater or Equal to 0  |                      -                      |
+|          ProxyTimeout         |           Proxy Timeout          |     Integer     |        Textbox(Number)        |      Greater Than 0     |                      -                      |
+|          DownloadRate         |           Download Rate          |     Integer     |        Textbox(Number)        |  Greater or Equal to 0  |                      -                      |
+|           UploadRate          |            Upload Rate           |     Integer     |        Textbox(Number)        |  Greater or Equal to 0  |                      -                      |
+|              IPv6             |               IPv6               |     Boolean     |            Checkbox           |            -            |                      -                      |
+|            IPv6Only           |             IPv6 Only            |     Boolean     |            Checkbox           |            -            |                      -                      |
+|        GracefulTimeout        |         Graceful Timeout         |     Integer     |        Textbox(Number)        |      Greater Than 0     |                      -                      |
+|              JA3              |                JA3               |     Boolean     |            Checkbox           |            -            |                      -                      |
+|              JA3S             |               JA3S               |     Boolean     |            Checkbox           |            -            |                      -                      |
+|         ProxyRequests         |          Proxy Requests          |     Integer     |        Textbox(Number)        |            -            |            Greater or Equal to 0            |
+|         ProxyResponses        |          Proxy Responses         |     Integer     |        Textbox(Number)        |            -            |                      -                      |
+|              Deny             |               Deny               |      Object     |               -               |        Must Exist       |            See [Bundle](#bundle)            |
+|           SSLEngine           |                 -                |      String     |               -               |            -            |                      -                      |
+|          SSLEarlyData         |          SSL Early Data          |     Boolean     |            Checkbox           |            -            |                      -                      |
+|           DropNotSSL          |           Drop Not SSL           |     Boolean     |            Checkbox           |            -            |                      -                      |
+|         SSLDownstream         |                 -                |     Boolean     |               -               |            -            |          Don't Change Default Value         |
+|   SSLDownstreamALPNAcception  |   SSL Downstream ALPN Acception  | Array of String | Textarea(String per One Line) |            -            |                      -                      |
+|      SSLDownstreamBypass      |       SSL Downstream Bypass      |      Object     |               -               |            -            |            See [Bundle](#bundle)            |
+|       SSLDownstreamBlock      |       SSL Downstream Block       |      Object     |               -               |            -            |            See [Bundle](#bundle)            |
+|           SSLRootCA           |            SSL Root CA           |      String     |     Upload File(One File)     |      Must One File      |                      -                      |
+|          SSLRootCAKey         |          SSL Root CA Key         |      String     |     Upload File(One File)     |      Must One File      |                      -                      |
+|     SSLRootCAPasswordFile     |     SSL Root CA Password File    | Array of String |   Upload Files(Multi-Files)   |            -            |                      -                      |
+|    SSLCertificateExpiration   |    SSL Certificate Expiration    |     Integer     |        Textbox(Number)        |   0 or greater than 60  |                      -                      |
+| SSLDownstreamHandshakeTimeout | SSL Downstream Handshake Timeout |     Integer     |        Textbox(Number)        |      Greater Than 0     |                      -                      |
+|           SSLDHparam          |           SSL DH Param           |      String     |     Upload File(One File)     |            -            |                      -                      |
+|          SSLECDHCurve         |          SSL ECDH Curve          |      String     |            Textbox            |            -            |                      -                      |
+|      SSLDownstreamCiphers     |      SSL Downstream Ciphers      |      String     |            Textbox            |            -            |                      -                      |
+|     SSLPreferServerCiphers    |     SSL Prefer Server Ciphers    |     Boolean     |            Checkbox           |            -            |                      -                      |
+|    SSLDownstreamMinVersion    |  SSL Downstream Minimum Version  |      String     |         Select Option         |            -            |                      -                      |
+|    SSLDownstreamMaxVersion    |  SSL Downstream Maximum Version  |      String     |         Select Option         |            -            |                      -                      |
+|       SSLSessionTimeout       |        SSL Session Timeout       |     Integer     |        Textbox(Number)        |      Greater Than 0     |                      -                      |
 |        SSLSessionCache        |         SSL Session Cache        |      String     |               -               |            -            | See [SSL Session Cache](#ssl_session_cache) |
-|       SSLSessionTickets       |        SSL Session Tickets       |     Boolean     |            Checkbox           |            -            |                       -                      |
-|      SSLSessionTicketKey      |      SSL Session Ticket Key      | Array of String |   Upload Files(Multi-Files)   |            -            |       -      |
-|          SSLUpstream          |           -           |     Boolean     |            -           |            -            |              Don't Change Default Value             |
-|  SSLUpstreamHandshakeTimeout  |  SSL Upstream Handshake Timeout  |     Integer     |        Textbox(Number)        |      Greater Than 0     |                       -                      |
-|       SSLUpstreamCiphers      |       SSL Upstream Ciphers       |      String     |            Textbox            |      -      |            -           |
-|     SSLUpstreamMinVersion     |   SSL Upstream Minimum Version   |      String     |         Select Option         |    -    |        -       |
-|     SSLUpstreamMaxVersion     |   SSL Upstream Maximum Version   |      String     |         Select Option         |    -    |        -       |
-|        SSLSessionReuse        |         SSL Session Reuse        |     Boolean     |            Checkbox           |            -            |                       -                      |
-|        NetworkSimulator       |         Network Simulator        | Array of Object |               -               |            -            |  See [Network Simulator](#network_simulator) |
-|            Sysloger           |             Sysloger             | Array of Object |               -               |            -            |           See [Sysloger](#sysloger)          |
-|          LoadBalance          |                 -                | Array of Object |               -               |            -            |                Unused for Now                |
-|            Offload            |              Offload             | Array of Object |               -               |            -            |            See [Offload](#offload)           |
-|             Onload            |              Onload              | Array of Object |               -               |            -            |             See [Onload](#onload)            |
+|       SSLSessionTickets       |        SSL Session Tickets       |     Boolean     |            Checkbox           |            -            |                      -                      |
+|      SSLSessionTicketKey      |      SSL Session Ticket Key      | Array of String |   Upload Files(Multi-Files)   |            -            |                      -                      |
+|          SSLUpstream          |                 -                |     Boolean     |               -               |            -            |          Don't Change Default Value         |
+|  SSLUpstreamHandshakeTimeout  |  SSL Upstream Handshake Timeout  |     Integer     |        Textbox(Number)        |      Greater Than 0     |                      -                      |
+|       SSLUpstreamCiphers      |       SSL Upstream Ciphers       |      String     |            Textbox            |            -            |                      -                      |
+|     SSLUpstreamMinVersion     |   SSL Upstream Minimum Version   |      String     |         Select Option         |            -            |                      -                      |
+|     SSLUpstreamMaxVersion     |   SSL Upstream Maximum Version   |      String     |         Select Option         |            -            |                      -                      |
+|        SSLSessionReuse        |         SSL Session Reuse        |     Boolean     |            Checkbox           |            -            |                      -                      |
+|        NetworkSimulator       |         Network Simulator        | Array of Object |               -               |            -            | See [Network Simulator](#network_simulator) |
+|            Sysloger           |             Sysloger             | Array of Object |               -               |            -            |          See [Sysloger](#sysloger)          |
+|          LoadBalance          |                 -                | Array of Object |               -               |            -            |                Unused for Now               |
+|            Offload            |              Offload             | Array of Object |               -               |            -            |           See [Offload](#offload)           |
+|             Onload            |              Onload              | Array of Object |               -               |            -            |            See [Onload](#onload)            |
 
 <h3 id="bundle">Bundle</h3>
 
-|           Key          |          Prompt         |    Json Type    |              Style             |               Validation              |                        Note                        |
-|:----------------------:|:-----------------------:|:---------------:|:------------------------------:|:-------------------------------------:|:--------------------------------------------------:|
+|           Key          |          Prompt         |    Json Type    |              Style             |               Validation              |                              Note                             |
+|:----------------------:|:-----------------------:|:---------------:|:------------------------------:|:-------------------------------------:|:-------------------------------------------------------------:|
 |          Tuple         |          Tuple          |      Object     |                -               |                   -                   | See [4-Tuple](Configuration/Nethook-Configuration.md#4_tuple) |
-|         Domain         |          Domain         | Array of String |  Textarea(String per One Line) |                   -                   |             Wildcard Domain is Accepted            |
-| CertificateFingerprint | Certificate Fingerprint | Array of String | Textarea(SHA-256 per One Line) | Valid Length and Character of SHA-256 |                  Case Insensitive                  |
+|         Domain         |          Domain         | Array of String |  Textarea(String per One Line) |                   -                   |                  Wildcard Domain is Accepted                  |
+| CertificateFingerprint | Certificate Fingerprint | Array of String | Textarea(SHA-256 per One Line) | Valid Length and Character of SHA-256 |                        Case Insensitive                       |
 
 <h3 id="ssl_session_cache">Session Cache</h3>
 
@@ -86,14 +87,14 @@ Accept: `off`, `none` or numbers, number must be greater than zero.
 
 <h3 id="network_simulator">Network Simulator</h3>
 
-|          Key         |         Prompt         | Json Type |      Style      |                                   Validation                                  |          Note         |
-|:--------------------:|:----------------------:|:---------:|:---------------:|:-----------------------------------------------------------------------------:|:---------------------:|
-|          MTU         |           MTU          |  Integer  | Textbox(Number) |                                  1000 to 1500                                 |           -           |
-| FixedDestinationPort | Fixed Destination Port |  Integer  | Textbox(Number) |                                    0-65535                                    |           -           |
-|       SendPort       |        Send Port       |   String  |  Select Option  | - |           -           |
-|       PcapPath       |            -           |   String  |        -        |                                       -                                       |     Unused for Now    |
-|      ContentPath     |            -           |   String  |        -        |                                       -                                       |     Unused for Now    |
-|        Hidden        |         Hidden         |   Object  |        -        |                                       -                                       | See [Bundle](#bundle) |
+|          Key         |         Prompt         | Json Type |      Style      |  Validation  |          Note         |
+|:--------------------:|:----------------------:|:---------:|:---------------:|:------------:|:---------------------:|
+|          MTU         |           MTU          |  Integer  | Textbox(Number) | 1000 to 1500 |           -           |
+| FixedDestinationPort | Fixed Destination Port |  Integer  | Textbox(Number) |    0-65535   |           -           |
+|       SendPort       |        Send Port       |   String  |  Select Option  |       -      |           -           |
+|       PcapPath       |            -           |   String  |        -        |       -      |     Unused for Now    |
+|      ContentPath     |            -           |   String  |        -        |       -      |     Unused for Now    |
+|        Hidden        |         Hidden         |   Object  |        -        |       -      | See [Bundle](#bundle) |
 
 <h3 id="sysloger">Sysloger</h3>
 
@@ -108,7 +109,7 @@ Accept: `off`, `none` or numbers, number must be greater than zero.
 |         ConnectingUpstreamTimeout        |          Connecting Upstream Timeout         |  Boolean  |     Checkbox    |      -     |             -            |
 |          ConnectingUpstreamReset         |           Connecting Upstream Reset          |  Boolean  |     Checkbox    |      -     |             -            |
 |             ConnectedUpstream            |              Connected Upstream              |  Boolean  |     Checkbox    |      -     |             -            |
-|              Established              |                Established               |  Boolean  |     Checkbox    |      -     |             -            |
+|                Established               |                  Established                 |  Boolean  |     Checkbox    |      -     |             -            |
 |            ForwardingFinished            |              Forwarding Finished             |  Boolean  |     Checkbox    |      -     |             -            |
 |         SSLPeekClientHelloTimeout        |         SSL Peek ClientHello Timeout         |  Boolean  |     Checkbox    |      -     | Yes, It's "ClientHello". |
 |                  NotSSL                  |                    Not SSL                   |  Boolean  |     Checkbox    |      -     |             -            |
@@ -122,7 +123,7 @@ Accept: `off`, `none` or numbers, number must be greater than zero.
 |                   JA3S                   |                     JA3S                     |  Boolean  |     Checkbox    |      -     |             -            |
 |          SSLAcceptingDownstream          |           SSL Accepting Downstream           |  Boolean  |     Checkbox    |      -     |             -            |
 |       SSLAcceptingDownstreamTimeout      |       SSL Accepting Downstream Timeout       |  Boolean  |     Checkbox    |      -     |             -            |
-|       SSLAcceptingDownstreamFailed      |       SSL Accepting Downstream Failed       |  Boolean  |     Checkbox    |      -     |             -            |
+|       SSLAcceptingDownstreamFailed       |        SSL Accepting Downstream Failed       |  Boolean  |     Checkbox    |      -     |             -            |
 |           SSLAcceptedDownstream          |            SSL Accepted Downstream           |  Boolean  |     Checkbox    |      -     |             -            |
 |              SSLEstablished              |                SSL Established               |  Boolean  |     Checkbox    |      -     |             -            |
 |        SSLUpstreamCertificateChain       |        SSL Upstream Certificate Chain        |  Boolean  |     Checkbox    |      -     |             -            |
@@ -134,7 +135,7 @@ Accept: `off`, `none` or numbers, number must be greater than zero.
 |       SSLUpstreamCertificateIssuer       |        SSL Upstream Certificate Issuer       |  Boolean  |     Checkbox    |      -     |             -            |
 |       SSLUpstreamCertificateSubject      |       SSL Upstream Certificate Subject       |  Boolean  |     Checkbox    |      -     |             -            |
 |      SSLUpstreamCertificatePublicKey     |      SSL Upstream Certificate Public Key     |  Boolean  |     Checkbox    |      -     |             -            |
-|  SSLUpstreamCertificateKeyUsage | SSL Upstream Certificate Key Usage |  Boolean  |     Checkbox    |      -     |             -            |
+|      SSLUpstreamCertificateKeyUsage      |      SSL Upstream Certificate Key Usage      |  Boolean  |     Checkbox    |      -     |             -            |
 |  SSLUpstreamCertificateExtensionKeyUsage | SSL Upstream Certificate Extension Key Usage |  Boolean  |     Checkbox    |      -     |             -            |
 |    SSLUpstreamCertificateExtensionSAN    |    SSL Upstream Certificate Extension SAN    |  Boolean  |     Checkbox    |      -     |             -            |
 |   SSLUpstreamCertificateFingerprintSHA1  |   SSL Upstream Certificate Fingerprint SHA1  |  Boolean  |     Checkbox    |      -     |             -            |
@@ -146,24 +147,24 @@ Accept: `off`, `none` or numbers, number must be greater than zero.
 |:----------------------------------------:|:--------------------------------------------:|:---------:|:---------------:|:----------:|:------------------------:|
 |          DestinationIpv4Address          |           Destination IPv4 Address           |   String  |     Textbox     |    IPv4    |             -            |
 |              DestinationPort             |               Destination Port               |  Integer  | Textbox(Number) |   0-65535  |             -            |
-| DecryptAcceptingDownstream | Decryption Side Accepting Downstream |  Boolean  |     Checkbox    |      -     |             -            |
-| DecryptAcceptedDownstream | Decryption Side Accepted Downstream |  Boolean  |     Checkbox    |      -     |             -            |
-| AcceptingDownstreamDenied | Decryption Side Accepting Downstream Denied |  Boolean  |     Checkbox    |      -     |             -            |
-| EncryptAcceptingDownstream | Encryption Side Accepting Downstream |  Boolean  |     Checkbox    |      -     |             -            |
-| EncryptAcceptedDownstream | Encryption Side Accepted Downstream |  Boolean  |     Checkbox    |      -     |             -            |
-| EncryptAcceptingDownstreamTimeout | Encryption Side Accepting Downstream Timeout |  Boolean  |     Checkbox    |      -     |             -            |
-| DecryptConnectingUpstream | Decryption Side Connecting Upstream |  Boolean  |     Checkbox    |      -     |             -            |
-| DecryptConnectingUpstreamTimeout | Decryption Connecting Upstream Timeout |  Boolean  |     Checkbox    |      -     |             -            |
-| DecryptConnectingUpstreamReset | Decryption Connecting Upstream Reset |  Boolean  |     Checkbox    |      -     |             -            |
-| DecryptConnectedUpstream | Decryption Connected Upstream |  Boolean  |     Checkbox    |      -     |             -            |
-| DecryptEstablished | Decryption Established |  Boolean  |     Checkbox    |      -     |             -            |
-| DecryptForwardingFinished | Decryption Forwarding Finished |  Boolean  |     Checkbox    |      -     |             -            |
-| EncryptConnectingUpstream | Encryption Connecting Upstream |  Boolean  |     Checkbox    |      -     |             -            |
-| EncryptConnectingUpstreamTimeout | Encryption Connecting Upstream Timeout |  Boolean  |     Checkbox    |      -     |             -            |
-| EncryptConnectingUpstreamReset | Encryption Connecting Upstream Reset |  Boolean  |     Checkbox    |      -     |             -            |
-| EncryptConnectedUpstream | Encryption Connected Upstream |  Boolean  |     Checkbox    |      -     |             -            |
-| EncryptEstablished | Encryption Established |  Boolean  |     Checkbox    |      -     |             -            |
-| EncryptForwardingFinished | Encryption Forwarding Finished |  Boolean  |     Checkbox    |      -     |             -            |
+|        DecryptAcceptingDownstream        |     Decryption Side Accepting Downstream     |  Boolean  |     Checkbox    |      -     |             -            |
+|         DecryptAcceptedDownstream        |      Decryption Side Accepted Downstream     |  Boolean  |     Checkbox    |      -     |             -            |
+|         AcceptingDownstreamDenied        |  Decryption Side Accepting Downstream Denied |  Boolean  |     Checkbox    |      -     |             -            |
+|        EncryptAcceptingDownstream        |     Encryption Side Accepting Downstream     |  Boolean  |     Checkbox    |      -     |             -            |
+|         EncryptAcceptedDownstream        |      Encryption Side Accepted Downstream     |  Boolean  |     Checkbox    |      -     |             -            |
+|     EncryptAcceptingDownstreamTimeout    | Encryption Side Accepting Downstream Timeout |  Boolean  |     Checkbox    |      -     |             -            |
+|         DecryptConnectingUpstream        |      Decryption Side Connecting Upstream     |  Boolean  |     Checkbox    |      -     |             -            |
+|     DecryptConnectingUpstreamTimeout     |    Decryption Connecting Upstream Timeout    |  Boolean  |     Checkbox    |      -     |             -            |
+|      DecryptConnectingUpstreamReset      |     Decryption Connecting Upstream Reset     |  Boolean  |     Checkbox    |      -     |             -            |
+|         DecryptConnectedUpstream         |         Decryption Connected Upstream        |  Boolean  |     Checkbox    |      -     |             -            |
+|            DecryptEstablished            |            Decryption Established            |  Boolean  |     Checkbox    |      -     |             -            |
+|         DecryptForwardingFinished        |        Decryption Forwarding Finished        |  Boolean  |     Checkbox    |      -     |             -            |
+|         EncryptConnectingUpstream        |        Encryption Connecting Upstream        |  Boolean  |     Checkbox    |      -     |             -            |
+|     EncryptConnectingUpstreamTimeout     |    Encryption Connecting Upstream Timeout    |  Boolean  |     Checkbox    |      -     |             -            |
+|      EncryptConnectingUpstreamReset      |     Encryption Connecting Upstream Reset     |  Boolean  |     Checkbox    |      -     |             -            |
+|         EncryptConnectedUpstream         |         Encryption Connected Upstream        |  Boolean  |     Checkbox    |      -     |             -            |
+|            EncryptEstablished            |            Encryption Established            |  Boolean  |     Checkbox    |      -     |             -            |
+|         EncryptForwardingFinished        |        Encryption Forwarding Finished        |  Boolean  |     Checkbox    |      -     |             -            |
 |         SSLPeekClientHelloTimeout        |         SSL Peek ClientHello Timeout         |  Boolean  |     Checkbox    |      -     | Yes, It's "ClientHello". |
 |                  NotSSL                  |                    Not SSL                   |  Boolean  |     Checkbox    |      -     |             -            |
 |                    JA3                   |                      JA3                     |  Boolean  |     Checkbox    |      -     |             -            |
@@ -176,7 +177,7 @@ Accept: `off`, `none` or numbers, number must be greater than zero.
 |                   JA3S                   |                     JA3S                     |  Boolean  |     Checkbox    |      -     |             -            |
 |          SSLAcceptingDownstream          |           SSL Accepting Downstream           |  Boolean  |     Checkbox    |      -     |             -            |
 |       SSLAcceptingDownstreamTimeout      |       SSL Accepting Downstream Timeout       |  Boolean  |     Checkbox    |      -     |             -            |
-|       SSLAcceptingDownstreamFailed      |       SSL Accepting Downstream Failed       |  Boolean  |     Checkbox    |      -     |             -            |
+|       SSLAcceptingDownstreamFailed       |        SSL Accepting Downstream Failed       |  Boolean  |     Checkbox    |      -     |             -            |
 |           SSLAcceptedDownstream          |            SSL Accepted Downstream           |  Boolean  |     Checkbox    |      -     |             -            |
 |              SSLEstablished              |                SSL Established               |  Boolean  |     Checkbox    |      -     |             -            |
 |        SSLUpstreamCertificateChain       |        SSL Upstream Certificate Chain        |  Boolean  |     Checkbox    |      -     |             -            |
@@ -188,7 +189,7 @@ Accept: `off`, `none` or numbers, number must be greater than zero.
 |       SSLUpstreamCertificateIssuer       |        SSL Upstream Certificate Issuer       |  Boolean  |     Checkbox    |      -     |             -            |
 |       SSLUpstreamCertificateSubject      |       SSL Upstream Certificate Subject       |  Boolean  |     Checkbox    |      -     |             -            |
 |      SSLUpstreamCertificatePublicKey     |      SSL Upstream Certificate Public Key     |  Boolean  |     Checkbox    |      -     |             -            |
-|  SSLUpstreamCertificateKeyUsage | SSL Upstream Certificate Key Usage |  Boolean  |     Checkbox    |      -     |             -            |
+|      SSLUpstreamCertificateKeyUsage      |      SSL Upstream Certificate Key Usage      |  Boolean  |     Checkbox    |      -     |             -            |
 |  SSLUpstreamCertificateExtensionKeyUsage | SSL Upstream Certificate Extension Key Usage |  Boolean  |     Checkbox    |      -     |             -            |
 |    SSLUpstreamCertificateExtensionSAN    |    SSL Upstream Certificate Extension SAN    |  Boolean  |     Checkbox    |      -     |             -            |
 |   SSLUpstreamCertificateFingerprintSHA1  |   SSL Upstream Certificate Fingerprint SHA1  |  Boolean  |     Checkbox    |      -     |             -            |
@@ -196,13 +197,13 @@ Accept: `off`, `none` or numbers, number must be greater than zero.
 
 <h3 id="offload">Offload</h3>
 
-|           Key           |         Prompt         | Json Type |         Style         |   Validation  |                Note               |
-|:-----------------------:|:----------------------:|:---------:|:---------------------:|:-------------:|:---------------------------------:|
-|   DestinationIpAddress  | Destination IP Address |   String  |        Textbox        |  IPv4 or IPv6 |                 -                 |
-|      DowngradePort      |     Downgrade Port     |  Integer  |    Textbox(Number)    |    0-65535    |                 -                 |
-|       Certificate       |       Certificate      |   String  | Upload File(One File) | Must One File | - |
-|      CertificateKey     |     Certificate Key    |   String  | Upload File(One File) | Must One File | - |
-| CertificatePasswordFile |            -           |   String  |           -           |       -       |           Unused for Now          |
+|           Key           |         Prompt         | Json Type |         Style         |   Validation  |      Note      |
+|:-----------------------:|:----------------------:|:---------:|:---------------------:|:-------------:|:--------------:|
+|   DestinationIpAddress  | Destination IP Address |   String  |        Textbox        |  IPv4 or IPv6 |        -       |
+|      DowngradePort      |     Downgrade Port     |  Integer  |    Textbox(Number)    |    0-65535    |        -       |
+|       Certificate       |       Certificate      |   String  | Upload File(One File) | Must One File |        -       |
+|      CertificateKey     |     Certificate Key    |   String  | Upload File(One File) | Must One File |        -       |
+| CertificatePasswordFile |            -           |   String  |           -           |       -       | Unused for Now |
 
 <h3 id="onload">Onload</h3>
 

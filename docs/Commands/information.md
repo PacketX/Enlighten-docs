@@ -20,13 +20,13 @@ Requiring specific information
         --libelt,         -l    Enlighten library version
         --sys-types,      -s    System types
         --compiler,       -C    C and Go compiler
-        --git,            -g    Git information
         --defaults,       -d    Default files
         --commands,       -c    Enlighten commands
         --sys-commands,   -S    System command
         --extensions,     -e    Extensions
         --configuration,  -a    ./configure time values
         --3-party,        -3    Third party library information
+        --hash,           -i    Hash information
         --json,           -j    Output in json format
 
 Print the help

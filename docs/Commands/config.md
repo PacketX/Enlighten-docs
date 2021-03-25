@@ -19,6 +19,22 @@ Enlighten constant certificate forward
     enlighten-constant-certificate-forward
         --write,  -W    Write to file
 
+Enlighten dynamic certificate for IPS mode
+    enlighten-dynamic-certificate-forward-for-ips-mode
+        --write,  -W    Write to file
+
+Enlighten SSL/TLS offload
+    enlighten-ssl-offload
+        --write,  -W    Write to file
+
+Enlighten SSL/TLS onload
+    enlighten-ssl-onload
+        --write,  -W    Write to file
+
+Enlighten UDP forward
+    enlighten-udp-forward
+        --write,  -W    Write to file
+
 Nethook dynamic certificate forward
     nethook-dynamic-certificate-forward
         --lan,    -l    LAN port
@@ -37,24 +53,54 @@ Nethook SSL/TLS offload
         --wan,    -w    WAN port
         --write,  -W    Write to file
 
+Nethook for IPS mode decryption side
+    nethook-ips-decrypt
+        --lan,    -l    LAN port
+        --wan,    -w    WAN port
+        --write,  -W    Write to file
+
+Nethook for IPS mode encryption side
+    nethook-ips-encrypt
+        --lan,    -l    LAN port
+        --wan,    -w    WAN port
+        --write,  -W    Write to file
+
+Nethook for UDP forward
+    nethook-udp-forward
+        --lan,    -l    LAN port
+        --wan,    -w    WAN port
+        --write,  -W    Write to file
+
 Listening TCP forward
     listening-tcp-forward
         --write,  -W    Write to file
 
-Listening SSL forward
+Listening SSL/TLS forward
     listening-ssl-forward
         --write,  -W    Write to file
 
-Listening SSL onload
+Listening SSL/TLS onload
     listening-ssl-onload
         --write,  -W    Write to file
 
-Listening SSL offload
+Listening SSL/TLS offload
     listening-ssl-offload
+        --write,  -W    Write to file
+
+Listening IPS mode
+    listening-ssl-ips
+        --write,  -W    Write to file
+
+Listening UDP forward
+    listening-udp-forward
         --write,  -W    Write to file
 
 Kerctl defaults
     kerctl
+        --write,  -W    Write to file
+
+Nwctl defaults
+    nwctl
         --write,  -W    Write to file
 
 Print the help

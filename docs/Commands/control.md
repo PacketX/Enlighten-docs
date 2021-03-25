@@ -13,56 +13,58 @@ Control the Enlighten and www
 
 Start the Enlighten
     start
+        --configure,  -c    Configuration file, default: /usr/local/Enlighten/etc/enlighten/enlighten.json
 
 Stop the Enlighten
     stop
-        --pid,   -p    Enlighten process ID
-        --wait,  -w    Waiting seconds, default: 10 seconds
+        --pid,        -p    Enlighten process ID
+        --wait,       -w    Waiting seconds, default: 10 seconds
 
 Quit the Enlighten
     quit
-        --pid,   -p    Enlighten process ID
-        --wait,  -w    Waiting seconds, default: 10 seconds
+        --pid,        -p    Enlighten process ID
+        --wait,       -w    Waiting seconds, default: 10 seconds
 
 Restart the Enlighten
     restart
-        --pid,   -p    Enlighten process ID
-        --wait,  -w    Waiting seconds, default: 10 seconds
+        --pid,        -p    Enlighten process ID
+        --wait,       -w    Waiting seconds, default: 10 seconds
+        --configure,  -c    Configuration file, default: /usr/local/Enlighten/etc/enlighten/enlighten.json
 
 Force stop the Enlighten
     kill
 
 Rotate the Enlighten log
     rotate-log
-        --pid,   -p    Enlighten process ID
+        --pid,        -p    Enlighten process ID
 
 Reload the Enlighten
     reload
-        --pid,   -p    Enlighten process ID
+        --pid,        -p    Enlighten process ID
 
 Stop the Enlighten workers gracefully
     graceful-quit
-        --pid,   -p    Enlighten process ID
+        --pid,        -p    Enlighten process ID
 
 Start the www
     start-www
 
 Stop the www
     stop-www
-        --pid,   -p    Www process ID
-        --wait,  -w    Waiting seconds, default: 10 seconds
+        --pid,        -p    Www process ID
+        --wait,       -w    Waiting seconds, default: 10 seconds
 
 Restart the www
     restart-www
-        --pid,   -p    Www process ID
-        --wait,  -w    Waiting seconds, default: 10 seconds
+        --pid,        -p    Www process ID
+        --wait,       -w    Waiting seconds, default: 10 seconds
 
 Force stop the www
     kill-www
 
 Print running process information
     proc-list
-        --json,  -j    Output in json format
+        --json,       -j    Output in json format
 
 Print the help
     help

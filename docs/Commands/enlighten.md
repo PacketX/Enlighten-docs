@@ -13,7 +13,7 @@ Enlighten, proxy anything
 
 Main Enlighten event loop
     core
-        --configure,  -c    Configuration file
+        --configure,  -c    Configuration file, default: /usr/local/Enlighten/etc/enlighten/enlighten.json
         --test,       -t    Test configuration file
 
 Print the help
